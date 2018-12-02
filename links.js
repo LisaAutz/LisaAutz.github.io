@@ -148,4 +148,4 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 110, -1500, 100,100, {
 //sm circles
 
 var linkBodies = [blink1,blink2,blink3,blink4,blink5,blink6,blink7,blink8];
-var googlesprite = {xScale: 1, yScale: 1, xOffset: 0.5000000000000001, yOffset: 0.5,texture:'sizedgoogle.png'}
+var googlesprite = {xScale: 1, yScale: 1, xOffset: 0.5000000000000001, yOffset: 0.5,texture:'Ayla.jpg'}
