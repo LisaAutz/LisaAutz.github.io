@@ -110,23 +110,23 @@ Matter.World.add(world,mConstraint);
 
 
 
-// Matter.Events.on(mConstraint,'mousedown',function(event){
-//     if(mConstraint.body == null){
-//       console.log(mConstraint);
+Matter.Events.on(mConstraint,'mousedown',function(event){
+if(mConstraint.body == null){
+console.log(mConstraint);
 
-//     }else{
-//       if(mConstraint.body.label != null){
-//         a = mConstraint.body;
-//         a.force = {x:0,y:-17.5};
-//         console.log(a)
-//         if(a.label.includes("squarelink")){
-//           window.open('https://www.google.com', '_blank');
-//           mConstraint.body = null;
+}else{
+if(mConstraint.body.label != null){
+a = mConstraint.body;
+a.force = {x:0,y:-17.5};
+console.log(a)
+if(a.label.includes("squarelink")){
+window.open('https://www.google.com', '_blank');
+mConstraint.body = null;
         }
       }
     }
-};
-// )
+});
+
 
 Matter.Events.on(mConstraint, 'mousemove', function(event) {
   mousepos = event.mouse.absolute;
