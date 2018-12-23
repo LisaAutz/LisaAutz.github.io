@@ -1,6 +1,7 @@
 
 
 
+
 var blink1 = Matter.Bodies.rectangle(window.innerWidth/1.5, -1300, 100,100, {
     label: "squarelink1",
     density: 0.04,
@@ -14,7 +15,7 @@ var blink1 = Matter.Bodies.rectangle(window.innerWidth/1.5, -1300, 100,100, {
       strokeStyle: '#424248',
       lineWidth: 2,
       sprite:{
-        texture:'images/base.png'
+        texture:'images/Ayla.jpg' 
       },
     }, 
   });
@@ -32,7 +33,7 @@ var blink2 = Matter.Bodies.rectangle(window.innerWidth/2, -1500, 100,100, {
     strokeStyle: '#424248',
     lineWidth: 2,
     sprite:{
-      texture:'images/base.png'
+      texture:'images/Ayla.jpg'
     },
   }, 
 });
@@ -50,7 +51,7 @@ var blink3 = Matter.Bodies.rectangle(window.innerWidth/3, -1400, 100,100, {
     strokeStyle: '#424248',
     lineWidth: 2,
     sprite:{
-      texture:'images/base.png'
+      texture:'images/Ayla.jpg'
     },
   }, 
 });
@@ -68,7 +69,7 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 110, -1500, 100,100, {
       strokeStyle: '#424248',
       lineWidth: 2,
       sprite:{
-        texture:'images/base.png'
+        texture:'images/Ayla.jpg'
       },
     }, 
   });
@@ -86,7 +87,7 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 110, -1500, 100,100, {
       strokeStyle: '#424248',
       lineWidth: 2,
       sprite:{
-        texture:'images/base.png'
+        texture:'images/Ayla.jpg'
       },
     }, 
   });
@@ -104,7 +105,7 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 110, -1500, 100,100, {
       strokeStyle: '#424248',
       lineWidth: 2,
       sprite:{
-        texture:'images/base.png'
+        texture:'images/Ayla.jpg'
       },
     }, 
   });
@@ -122,7 +123,7 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 110, -1500, 100,100, {
       strokeStyle: '#424248',
       lineWidth: 2,
       sprite:{
-        texture:'images/base.png'
+        texture:'images/Ayla.jpg'
       },
     }, 
   });
@@ -140,7 +141,7 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 110, -1500, 100,100, {
       strokeStyle: '#424248',
       lineWidth: 2,
       sprite:{
-        texture:'images/base.png'
+        texture:'images/Ayla.jpg'
       },
     }, 
   });
@@ -149,3 +150,4 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 110, -1500, 100,100, {
 
 var linkBodies = [blink1,blink2,blink3,blink4,blink5,blink6,blink7,blink8];
 var googlesprite = {xScale: 1, yScale: 1, xOffset: 0.5000000000000001, yOffset: 0.5,texture:'Ayla.jpg'}
+console.log(linkBodies.length)

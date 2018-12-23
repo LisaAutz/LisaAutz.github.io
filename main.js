@@ -1,3 +1,4 @@
+
 var myCanvas = document.getElementById('c');
 var ctx = myCanvas.getContext("2d");
 var flip = document.getElementById('flip');
