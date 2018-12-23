@@ -133,7 +133,7 @@ Matter.Events.on(mConstraint, 'mousemove', function(event) {
   list = Matter.Query.point(linkBodies,mousepos)
   if(list.length == 0){
     for(var i = 0;i < linkBodies.length;i++){
-      linkBodies[i].render.sprite.texture = "images/base.png";
+      linkBodies[i].render.sprite.texture = "images/Ayla.jpg";
       linkBodies[i].render.fillStyle="transparent";
     }
     // if(returnColor != null){
