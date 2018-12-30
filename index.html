@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
 	<style>
-	
 	</style>
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
@@ -11,17 +10,29 @@
 </head>
 
 <body>
-		<div id="float">
-				<h1>Hi</h1>
-		</div>
+	<div id="float">
+				<h1>Hi</h1>          
+	</div>
 
-		<div onclick="flipMe();invertGrav()">
-				<div id="flip"></div>
-		</div>
-	<canvas id='c' style = 'position: relative; left: 0px; top: 0px;'  >
+<!-- <a class="trigger_popup_fricc">Click here to show the popup</a>
+
+<div class="hover_bkgr_fricc">
+    <span class="helper"></span>
+    <div> 
+        <div class="popupCloseButton">x</div>
+        <p>Add any HTML content<br />inside the popup box!</p>
+    </div>
+</div> -->
+
+
+	<div onclick="flipMe();invertGrav()">
+			<div id="flip"></div>
+	</div>
+	
+	<canvas id='c' style = 'position: relative; left: 0px; top: 0px;'>
+	
 	</canvas>
 
-	
 	<script>
 		(function() {
 			var 
@@ -57,6 +68,7 @@
 			}
 		
 		})();
+
 	</script>
 	
 </body>

@@ -90,7 +90,7 @@ function invertGrav(){
   } else if (cycle == 1){
     engine.world.gravity.x = 0
     engine.world.gravity.y = -0.5;
-    cycle += 1
+    cycle += 1 // cycle = cycle + 1;
   }else if (cycle == 2){
     engine.world.gravity.y = -0.3;
     engine.world.gravity.x = 0.5
@@ -120,7 +120,7 @@ a = mConstraint.body;
 a.force = {x:0,y:-17.5};
 console.log(a)
 if(a.label.includes("squarelink")){
-window.open('https://www.google.com', '_blank');
+window.open('bio.html', '_blank');
 mConstraint.body = null;
         }
       }
@@ -132,10 +132,10 @@ Matter.Events.on(mConstraint, 'mousemove', function(event) {
   mousepos = event.mouse.absolute;
   list = Matter.Query.point(linkBodies,mousepos)
   if(list.length == 0){
-    for(var i = 0;i < linkBodies.length;i++){
-      linkBodies[i].render.sprite.texture = "images/Ayla.jpg";
-      linkBodies[i].render.fillStyle="transparent";
-    }
+    // for(var i = 0;i < linkBodies.length;i++){
+    //   linkBodies[i].render.sprite.texture = "images/Dogs/1.png";
+    //   linkBodies[i].render.fillStyle="images/Dogs/2.png";
+    // }
     // if(returnColor != null){
     //   returnColor.render.fillStyle="transparent";
     //   returnColor.render.sprite.texture = null;
@@ -145,34 +145,46 @@ Matter.Events.on(mConstraint, 'mousemove', function(event) {
     return;
   } else if (list.length != 0){
     if(list[0].label == 'squarelink1'){
-      list[0].render.sprite.texture = 'images/Ayla.jpg'
+      list[0].render.sprite.texture = 'images/Dogs/1.png'
       returnColor = list[0]
     } else if (list[0].label == 'squarelink2'){
-      list[0].render.sprite.texture = 'images/sizedyoutube.png'
+      list[0].render.sprite.texture = 'images/Dogs/2.png'
       returnColor = list[0]
     } else if (list[0].label == 'squarelink3'){
-      list[0].render.sprite.texture = 'images/Ayla.jpg'
+      list[0].render.sprite.texture = 'images/Dogs/3.png'
       returnColor = list[0]
     }else if (list[0].label == 'squarelink4'){
-      list[0].render.sprite.texture = 'images/Ayla.jpg'
+      list[0].render.sprite.texture = 'images/Dogs/4.png'
       returnColor = list[0]
     }else if (list[0].label == 'squarelink5'){
-      list[0].render.sprite.texture = 'images/Ayla.jpg'
+      list[0].render.sprite.texture = 'images/Dogs/5.png'
       returnColor = list[0]
     }else if (list[0].label == 'squarelink6'){
-      list[0].render.sprite.texture = 'images/Ayla.jpg'
+      list[0].render.sprite.texture = 'images/Dogs/6.png'
       returnColor = list[0]
     }else if (list[0].label == 'squarelink7'){
-      list[0].render.sprite.texture = 'images/Ayla.jpg'
+      list[0].render.sprite.texture = 'images/Dogs/7.png'
       returnColor = list[0]
     }else if (list[0].label == 'squarelink8'){
-      list[0].render.sprite.texture = 'images/Ayla.jpg'
+      list[0].render.sprite.texture = 'images/Dogs/8.png'
       returnColor = list[0]
     }
     
   }
 
-  
+  $(window).load(function () {
+    $(".trigger_popup_fricc").click(function(){
+       $('.hover_bkgr_fricc').show();
+    });
+    $('.hover_bkgr_fricc').click(function(){
+        $('.hover_bkgr_fricc').hide();
+    });
+    $('.popupCloseButton').click(function(){
+        $('.hover_bkgr_fricc').hide();
+});
+
+});
+
 });
 
 

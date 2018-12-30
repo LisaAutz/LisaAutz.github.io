@@ -8,14 +8,14 @@ var blink1 = Matter.Bodies.rectangle(window.innerWidth/1.5, -1300, 100,100, {
     friction: 1,
     frictionAir: 0.00001,
     restitution: 0.6,
-    url:'https://www.google.com/',
+    url:'bio.html',
     isStatic:false,
     render: {
       fillStyle: 'transparent',
       strokeStyle: '#424248',
       lineWidth: 2,
       sprite:{
-        texture:'images/Ayla.jpg' 
+        texture:'images/Dogs/1.png' 
       },
     }, 
   });
@@ -26,14 +26,14 @@ var blink2 = Matter.Bodies.rectangle(window.innerWidth/2, -1500, 100,100, {
   friction: 1,
   frictionAir: 0.00001,
   restitution: 0.6,
-  url:'https://www.youtube.com/',
+  url:'bio.html',
   isStatic:false,
   render: {
     fillStyle: 'transparent',
     strokeStyle: '#424248',
     lineWidth: 2,
     sprite:{
-      texture:'images/Ayla.jpg'
+      texture:'images/Dogs/2.png'
     },
   }, 
 });
@@ -44,14 +44,14 @@ var blink3 = Matter.Bodies.rectangle(window.innerWidth/3, -1400, 100,100, {
   friction: 1,
   frictionAir: 0.00001,
   restitution: 0.6,
-  url:'https://www.twitch.tv/',
+  url:'bio.html',
   isStatic:false,
   render: {
     fillStyle: 'transparent',
     strokeStyle: '#424248',
     lineWidth: 2,
     sprite:{
-      texture:'images/Ayla.jpg'
+      texture:'images/Dogs/3.png'
     },
   }, 
 });
@@ -62,14 +62,14 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 110, -1500, 100,100, {
     friction: 1,
     frictionAir: 0.00001,
     restitution: 0.6,
-    url:'https://www.reddit.com/',
+    url:'bio.html',
     isStatic:false,
     render: {
       fillStyle: 'transparent',
       strokeStyle: '#424248',
       lineWidth: 2,
       sprite:{
-        texture:'images/Ayla.jpg'
+        texture:'images/Dogs/4.png'
       },
     }, 
   });
@@ -80,14 +80,14 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 110, -1500, 100,100, {
     friction: 1,
     frictionAir: 0.00001,
     restitution: 0.6,
-    url:'https://www.instagram.com/',
+    url:'bio.html',
     isStatic:false,
     render: {
       fillStyle: 'transparent',
       strokeStyle: '#424248',
       lineWidth: 2,
       sprite:{
-        texture:'images/Ayla.jpg'
+        texture:'images/Dogs/5.png'
       },
     }, 
   });
@@ -98,14 +98,14 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 110, -1500, 100,100, {
     friction: 1,
     frictionAir: 0.00001,
     restitution: 0.6,
-    url:'https://www.google.com/',
+    url:'bio.html',
     isStatic:false,
     render: {
       fillStyle: 'transparent',
       strokeStyle: '#424248',
       lineWidth: 2,
       sprite:{
-        texture:'images/Ayla.jpg'
+        texture:'images/Dogs/6.png'
       },
     }, 
   });
@@ -116,14 +116,14 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 110, -1500, 100,100, {
     friction: 1,
     frictionAir: 0.00001,
     restitution: 0.6,
-    url:'https://www.google.com/',
+    url:'bio.html',
     isStatic:false,
     render: {
       fillStyle: 'transparent',
       strokeStyle: '#424248',
       lineWidth: 2,
       sprite:{
-        texture:'images/Ayla.jpg'
+        texture:'images/Dogs/7.png'
       },
     }, 
   });
@@ -134,14 +134,14 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 110, -1500, 100,100, {
     friction: 1,
     frictionAir: 0.00001,
     restitution: 0.6,
-    url:'https://www.google.com/',
+    url:'bio.html',
     isStatic:false,
     render: {
       fillStyle: 'transparent',
       strokeStyle: '#424248',
       lineWidth: 2,
       sprite:{
-        texture:'images/Ayla.jpg'
+        texture:'images/Dogs/8.png'
       },
     }, 
   });
