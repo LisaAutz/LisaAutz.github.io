@@ -12,7 +12,7 @@ var blink1 = Matter.Bodies.rectangle(window.innerWidth/1.5, -1300, 100,100, {
     isStatic:false,
     render: {
       fillStyle: 'transparent',
-      strokeStyle: '#424248',
+      strokeStyle: '#8181ff',
       lineWidth: 2,
       sprite:{
         texture:'images/Dogs/1.png' 
@@ -102,7 +102,7 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 110, -1500, 100,100, {
     isStatic:false,
     render: {
       fillStyle: 'transparent',
-      strokeStyle: '#424248',
+      strokeStyle: '#8181ff',
       lineWidth: 2,
       sprite:{
         texture:'images/Dogs/6.png'

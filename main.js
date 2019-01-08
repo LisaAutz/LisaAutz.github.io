@@ -15,13 +15,14 @@ var render = Matter.Render.create({
   options: {
     width: window.innerWidth,
     height: window.innerHeight,
-    background: '#18181f',
+    background: '#36394f',
     wireframes: false,
     showAngleIndicator: false
   }
 });
 
-engine.world.gravity.y = 0.35;
+// 0.35
+engine.world.gravity.y = .3;
 engine.world.gravity.x = 0
 
 

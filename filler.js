@@ -106,12 +106,12 @@ var lgball1 = Matter.Bodies.circle(window.innerWidth/2, -1200, 55, {
   url:"https://www.google.com",
   isStatic:false,
   render: {
-    fillStyle: 'transparent',
-    strokeStyle: '#424248',
+    fillStyle: '#3435ff',
+    strokeStyle: '#3435ff',
     lineWidth: 3,
   }, 
   sprite:{
-        texture:'images/Ayla.jpg' 
+        texture:'#3435ff' 
       },
 });
 
