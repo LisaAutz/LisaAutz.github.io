@@ -2,7 +2,7 @@
 
 
 
-var blink1 = Matter.Bodies.rectangle(window.innerWidth/1.5, -1300, 100,100, {
+var blink1 = Matter.Bodies.rectangle(window.innerWidth/1.5, 75, 75, 75, {
     label: "squarelink1",
     density: 0.04,
     friction: 1,
@@ -11,16 +11,16 @@ var blink1 = Matter.Bodies.rectangle(window.innerWidth/1.5, -1300, 100,100, {
     url:'bio.html',
     isStatic:false,
     render: {
-      fillStyle: 'transparent',
+      fillStyle: '#8181ff',
       strokeStyle: '#8181ff',
       lineWidth: 2,
-      sprite:{
-        texture:'images/Dogs/1.png' 
-      },
+      // sprite:{
+      //   texture:'images/Ayla.jpg' 
+      // },
     }, 
   });
 
-var blink2 = Matter.Bodies.rectangle(window.innerWidth/2, -1500, 100,100, {
+var blink2 = Matter.Bodies.rectangle(window.innerWidth/2, 75, 75, 75, {
   label: "squarelink2",
   density: 0.04,
   friction: 1,
@@ -29,16 +29,16 @@ var blink2 = Matter.Bodies.rectangle(window.innerWidth/2, -1500, 100,100, {
   url:'bio.html',
   isStatic:false,
   render: {
-    fillStyle: 'transparent',
-    strokeStyle: '#424248',
+    fillStyle: '#8181ff',
+    strokeStyle: '#8181ff',
     lineWidth: 2,
-    sprite:{
-      texture:'images/Dogs/2.png'
-    },
+    // sprite:{
+    //   texture:'images/Ayla.jpg'
+    // },
   }, 
 });
 
-var blink3 = Matter.Bodies.rectangle(window.innerWidth/3, -1400, 100,100, {
+var blink3 = Matter.Bodies.rectangle(window.innerWidth/3, 75, 75, 75, {
   label: "squarelink3",
   density: 0.04,
   friction: 1,
@@ -47,16 +47,16 @@ var blink3 = Matter.Bodies.rectangle(window.innerWidth/3, -1400, 100,100, {
   url:'bio.html',
   isStatic:false,
   render: {
-    fillStyle: 'transparent',
-    strokeStyle: '#424248',
+    fillStyle: '#8181ff',
+    strokeStyle: '#8181ff',
     lineWidth: 2,
-    sprite:{
-      texture:'images/Dogs/3.png'
-    },
+    // sprite:{
+    // texture:'images/Ayla.jpg'
+    // },
   }, 
 });
 
-var blink4 = Matter.Bodies.rectangle(window.innerWidth - 110, -1500, 100,100, {
+var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
     label: "squarelink4",
     density: 0.04,
     friction: 1,
@@ -65,16 +65,16 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 110, -1500, 100,100, {
     url:'bio.html',
     isStatic:false,
     render: {
-      fillStyle: 'transparent',
-      strokeStyle: '#424248',
+      fillStyle: '#8181ff',
+      strokeStyle: '#8181ff',
       lineWidth: 2,
-      sprite:{
-        texture:'images/Dogs/4.png'
-      },
+    //   sprite:{
+    //   texture:'images/Ayla.jpg'
+    // },
     }, 
   });
 
-  var blink5 = Matter.Bodies.rectangle(window.innerWidth/1.3, -1700, 100,100, {
+  var blink5 = Matter.Bodies.rectangle(window.innerWidth/75, 75, 75, 75, {
     label: "squarelink5",
     density: 0.04,
     friction: 1,
@@ -83,16 +83,16 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 110, -1500, 100,100, {
     url:'bio.html',
     isStatic:false,
     render: {
-      fillStyle: 'transparent',
-      strokeStyle: '#424248',
+      fillStyle: '#8181ff',
+      strokeStyle: '#8181ff',
       lineWidth: 2,
-      sprite:{
-        texture:'images/Dogs/5.png'
-      },
+    // sprite:{
+    //    texture:'images/Ayla.jpg'
+    //  },
     }, 
   });
 
-  var blink6 = Matter.Bodies.rectangle(window.innerWidth/4, -1450, 100,100, {
+  var blink6 = Matter.Bodies.rectangle(window.innerWidth/ 75, 75, 75, 75, {
     label: "squarelink6",
     density: 0.04,
     friction: 1,
@@ -101,16 +101,16 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 110, -1500, 100,100, {
     url:'bio.html',
     isStatic:false,
     render: {
-      fillStyle: 'transparent',
+      fillStyle: '#8181ff',
       strokeStyle: '#8181ff',
       lineWidth: 2,
-      sprite:{
-        texture:'images/Dogs/6.png'
-      },
+      // sprite:{
+      // texture:'images/Ayla.jpg'
+      // },
     }, 
   });
-
-  var blink7 = Matter.Bodies.rectangle(200, -1250, 100,100, {
+ 
+  var blink7 = Matter.Bodies.rectangle( 75, 75, 75, 75, {
     label: "squarelink7",
     density: 0.04,
     friction: 1,
@@ -119,16 +119,16 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 110, -1500, 100,100, {
     url:'bio.html',
     isStatic:false,
     render: {
-      fillStyle: 'transparent',
-      strokeStyle: '#424248',
+      fillStyle: '#8181ff',
+      strokeStyle: '#8181ff',
       lineWidth: 2,
-      sprite:{
-        texture:'images/Dogs/7.png'
-      },
+      // sprite:{
+      // texture:'images/Dogs/7.png'
+      // },
     }, 
   });
 
-  var blink8 = Matter.Bodies.rectangle(100, -1700, 100,100, {
+  var blink8 = Matter.Bodies.rectangle(75, 75, 75, 75, {
     label: "squarelink8",
     density: 0.04,
     friction: 1,
@@ -137,12 +137,12 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 110, -1500, 100,100, {
     url:'bio.html',
     isStatic:false,
     render: {
-      fillStyle: 'transparent',
-      strokeStyle: '#424248',
+      fillStyle: '#8181ff',
+      strokeStyle: '#8181ff',
       lineWidth: 2,
-      sprite:{
-        texture:'images/Dogs/8.png'
-      },
+    //   sprite:{
+    //   texture:'images/Ayla.jpg'
+    // },
     }, 
   });
 

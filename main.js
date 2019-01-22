@@ -146,28 +146,28 @@ Matter.Events.on(mConstraint, 'mousemove', function(event) {
     return;
   } else if (list.length != 0){
     if(list[0].label == 'squarelink1'){
-      list[0].render.sprite.texture = 'images/Dogs/1.png'
+      list[0].render.sprite.texture = 'images/Ayla.jpg'
       returnColor = list[0]
     } else if (list[0].label == 'squarelink2'){
-      list[0].render.sprite.texture = 'images/Dogs/2.png'
+      list[0].render.sprite.texture = 'images/Ayla.jpg'
       returnColor = list[0]
     } else if (list[0].label == 'squarelink3'){
-      list[0].render.sprite.texture = 'images/Dogs/3.png'
+      list[0].render.sprite.texture = 'images/Ayla.jpg'
       returnColor = list[0]
     }else if (list[0].label == 'squarelink4'){
-      list[0].render.sprite.texture = 'images/Dogs/4.png'
+      list[0].render.sprite.texture = 'images/Ayla.jpg'
       returnColor = list[0]
     }else if (list[0].label == 'squarelink5'){
-      list[0].render.sprite.texture = 'images/Dogs/5.png'
+      list[0].render.sprite.texture = 'images/Ayla.jpg'
       returnColor = list[0]
     }else if (list[0].label == 'squarelink6'){
-      list[0].render.sprite.texture = 'images/Dogs/6.png'
+      list[0].render.sprite.texture = 'images/Ayla.jpg'
       returnColor = list[0]
     }else if (list[0].label == 'squarelink7'){
-      list[0].render.sprite.texture = 'images/Dogs/7.png'
+      list[0].render.sprite.texture = 'images/Ayla.jpg'
       returnColor = list[0]
     }else if (list[0].label == 'squarelink8'){
-      list[0].render.sprite.texture = 'images/Dogs/8.png'
+      list[0].render.sprite.texture = 'images/Ayla.jpg'
       returnColor = list[0]
     }
     
