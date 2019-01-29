@@ -146,31 +146,66 @@ Matter.Events.on(mConstraint, 'mousemove', function(event) {
     return;
   } else if (list.length != 0){
     if(list[0].label == 'squarelink1'){
-      list[0].render.sprite.texture = 'images/Ayla.jpg'
-      returnColor = list[0]
+      // list[0].render.sprite.texture = '#3435ff'
+      // returnColor = list[0]
     } else if (list[0].label == 'squarelink2'){
-      list[0].render.sprite.texture = 'images/Ayla.jpg'
-      returnColor = list[0]
+      // list[0].render.sprite.texture = 'images/Ayla.jpg'
+      // returnColor = list[0]
     } else if (list[0].label == 'squarelink3'){
-      list[0].render.sprite.texture = 'images/Ayla.jpg'
-      returnColor = list[0]
+      // list[0].render.sprite.texture = 'images/Ayla.jpg'
+      // returnColor = list[0]
     }else if (list[0].label == 'squarelink4'){
-      list[0].render.sprite.texture = 'images/Ayla.jpg'
-      returnColor = list[0]
+      // list[0].render.sprite.texture = 'images/Ayla.jpg'
+      // returnColor = list[0]
     }else if (list[0].label == 'squarelink5'){
-      list[0].render.sprite.texture = 'images/Ayla.jpg'
-      returnColor = list[0]
+      // list[0].render.sprite.texture = 'images/Ayla.jpg'
+      // returnColor = list[0]
     }else if (list[0].label == 'squarelink6'){
-      list[0].render.sprite.texture = 'images/Ayla.jpg'
-      returnColor = list[0]
+      // list[0].render.sprite.texture = 'images/Ayla.jpg'
+      // returnColor = list[0]
     }else if (list[0].label == 'squarelink7'){
-      list[0].render.sprite.texture = 'images/Ayla.jpg'
-      returnColor = list[0]
+      // list[0].render.sprite.texture = 'images/Ayla.jpg'
+      // returnColor = list[0]
     }else if (list[0].label == 'squarelink8'){
-      list[0].render.sprite.texture = 'images/Ayla.jpg'
-      returnColor = list[0]
+      // list[0].render.sprite.texture = 'images/Ayla.jpg'
+      // returnColor = list[0]
+    }else if (list[0].label == 'squarelink9'){
+      // list[0].render.sprite.texture = 'images/Ayla.jpg'
+      // returnColor = list[0]
+    }else if (list[0].label == 'squarelink10'){
+      // list[0].render.sprite.texture = 'images/Ayla.jpg'
+      // returnColor = list[0]
+    }else if (list[0].label == 'squarelink11'){
+      // list[0].render.sprite.texture = 'images/Ayla.jpg'
+      // returnColor = list[0]
+    }else if (list[0].label == 'squarelink12'){
+      // list[0].render.sprite.texture = 'images/Ayla.jpg'
+      // returnColor = list[0]
+    }else if (list[0].label == 'squarelink13'){
+      // list[0].render.sprite.texture = 'images/Ayla.jpg'
+      // returnColor = list[0]
+    }else if (list[0].label == 'squarelink14'){
+      // list[0].render.sprite.texture = 'images/Ayla.jpg'
+      // returnColor = list[0]
+    }else if (list[0].label == 'squarelink15'){
+      // list[0].render.sprite.texture = 'images/Ayla.jpg'
+      // returnColor = list[0]
+    }else if (list[0].label == 'squarelink16'){
+      // list[0].render.sprite.texture = 'images/Ayla.jpg'
+      // returnColor = list[0]
+    }else if (list[0].label == 'squarelink17'){
+      // list[0].render.sprite.texture = 'images/Ayla.jpg'
+      // returnColor = list[0]
+    }else if (list[0].label == 'squarelink18'){
+      // list[0].render.sprite.texture = 'images/Ayla.jpg'
+      // returnColor = list[0]
+    }else if (list[0].label == 'squarelink19'){
+      // list[0].render.sprite.texture = 'images/Ayla.jpg'
+      // returnColor = list[0]
+    }else if (list[0].label == 'squarelink20'){
+      // list[0].render.sprite.texture = 'images/Ayla.jpg'
+      // returnColor = list[0]
     }
-    
   }
 
   $(window).load(function () {

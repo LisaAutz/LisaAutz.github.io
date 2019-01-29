@@ -107,7 +107,7 @@ var lgball1 = Matter.Bodies.circle(window.innerWidth/2, 35, 35, {
   isStatic:false,
   render: {
     fillStyle: '#3435ff',
-    strokeStyle: 'blue',
+    strokeStyle: '#d3d3d3',
     lineWidth: 3,
   }, 
   // sprite:{
@@ -125,7 +125,7 @@ var lgball1 = Matter.Bodies.circle(window.innerWidth/2, 35, 35, {
   isStatic:false,
   render: {
     fillStyle: '#3435ff',
-    strokeStyle: 'blue',
+    strokeStyle: '#d3d3d3',
     lineWidth: 3,
     // sprite:{
     //     texture: 'images/Ayla.jpg' 
@@ -143,7 +143,7 @@ var lgball1 = Matter.Bodies.circle(window.innerWidth/2, 35, 35, {
   isStatic:false,
   render: {
     fillStyle: '#3435ff',
-    strokeStyle: 'blue',
+    strokeStyle: '#d3d3d3',
     lineWidth: 3,
   }, 
 });
@@ -248,7 +248,7 @@ var lgball1 = Matter.Bodies.circle(window.innerWidth/2, 35, 35, {
   isStatic:false,
   render: {
     fillStyle: '#3435ff',
-    strokeStyle: '#3435ff',
+    strokeStyle: '#d3d3d3',
     lineWidth: 3,
   }, 
 });
@@ -263,7 +263,7 @@ var lgball2 = Matter.Bodies.circle(window.innerWidth/2, 35, 35, {
   isStatic:false,
   render: {
     fillStyle: '#3435ff',
-    strokeStyle: '#3435ff',
+    strokeStyle: '#d3d3d3',
     lineWidth: 3,
   }, 
 });
@@ -281,7 +281,7 @@ var lgball3 = Matter.Bodies.circle(window.innerWidth/2, 35, 35, {
   isStatic:false,
   render: {
     fillStyle: '#3435ff',
-    strokeStyle: '#3435ff',
+    strokeStyle: '#d3d3d3',
     lineWidth: 3,
   }, 
 });
@@ -296,7 +296,7 @@ var lgball4 = Matter.Bodies.circle(window.innerWidth/2, 35, 35, {
   isStatic:false,
   render: {
     fillStyle: '#3435ff',
-    strokeStyle: '#3435ff',
+    strokeStyle: '#d3d3d3',
     lineWidth: 3,
   }, 
 });
@@ -313,7 +313,7 @@ var lgbox1 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
   isStatic:false,
   render: {
     fillStyle: '#3435ff',
-    strokeStyle: '#3435ff',
+    strokeStyle: '#d3d3d3',
     lineWidth: 2,
   }, 
 });
@@ -328,7 +328,7 @@ var lgbox2 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
   isStatic:false,
   render: {
     fillStyle: '#3435ff',
-    strokeStyle: '#3435ff',
+    strokeStyle: '#d3d3d3',
     lineWidth: 2,
   }, 
 });
@@ -343,7 +343,7 @@ var lgbox3 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
   isStatic:false,
   render: {
     fillStyle: '#3435ff',
-    strokeStyle: '#3435ff',
+    strokeStyle: '#d3d3d3',
     lineWidth: 2,
   }, 
 });
@@ -358,7 +358,7 @@ var lgbox4 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
   isStatic:false,
   render: {
     fillStyle: '#3435ff',
-    strokeStyle: '#3435ff',
+    strokeStyle: '#d3d3d3',
     lineWidth: 2,
   }, 
 });
@@ -373,7 +373,7 @@ var mdbox1 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
   isStatic:false,
   render: {
     fillStyle: '#3435ff',
-    strokeStyle: '#3435ff',
+    strokeStyle: '#d3d3d3',
     lineWidth: 2,
   }, 
 });
@@ -388,7 +388,7 @@ var mdbox2 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
   isStatic:false,
   render: {
     fillStyle: '#3435ff',
-    strokeStyle: '#3435ff',
+    strokeStyle: '#d3d3d3',
     lineWidth: 2,
   }, 
 });
@@ -403,7 +403,7 @@ var mdbox3 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
   isStatic:false,
   render: {
     fillStyle: '#3435ff',
-    strokeStyle: '#3435ff',
+    strokeStyle: '#d3d3d3',
     lineWidth: 2,
   }, 
 });
@@ -418,7 +418,7 @@ var mdbox4 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
   isStatic:false,
   render: {
     fillStyle: '#3435ff',
-    strokeStyle: '#3435ff',
+    strokeStyle: '#d3d3d3',
     lineWidth: 2,
   }, 
   // sprite:{
@@ -436,7 +436,7 @@ var smbox1 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
   isStatic:false,
   render: {
     fillStyle: '#3435ff',
-    strokeStyle: '#3435ff',
+    strokeStyle: '#d3d3d3',
     lineWidth: 2,
   },
   // sprite:{
@@ -454,7 +454,7 @@ var smbox2 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
   isStatic:false,
   render: {
     fillStyle: '#3435ff',
-    strokeStyle: '#3435ff',
+    strokeStyle: '#d3d3d3',
     lineWidth: 2,
   }, 
   // sprite:{
