@@ -14,7 +14,7 @@
 
 
 var blink1 = Matter.Bodies.rectangle(window.innerWidth/1.5, 75, 75, 75, {
-    label: "me",
+    label: "squarelink1",
     density: 0.04,
     friction: 1,
     frictionAir: 0.00001,
@@ -24,18 +24,11 @@ var blink1 = Matter.Bodies.rectangle(window.innerWidth/1.5, 75, 75, 75, {
       fillStyle: '#8181ff',
       strokeStyle: '#d3d3d3',
       lineWidth: 2,
-      myText: {
-        title: 'ME',
-        color: 'black',
-        fontSize: 20,
-        fontFamily: null,
-        fontWeight: 700
-      }
     }, 
   });
 
 var blink2 = Matter.Bodies.rectangle(window.innerWidth/2, 75, 75, 75, {
-  label: "squarelink22",
+  label: "squarelink2",
   density: 0.04,
   friction: 1,
   frictionAir: 0.00001,
@@ -107,7 +100,7 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
   });
 
   var blink6 = Matter.Bodies.rectangle(window.innerWidth/ 2, 75, 75, 75, {
-    label: "squarelink6",
+    label: "me",
     density: 0.04,
     friction: 1,
     frictionAir: 0.00001,
@@ -118,9 +111,13 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
       fillStyle: '#8181ff',
       strokeStyle: '#d3d3d3',
       lineWidth: 2,
-      // sprite:{
-      // texture:'images/Ayla.jpg'
-      // },
+      myText: {
+        title: 'ME',
+        color: 'white',
+        fontSize: 24,
+        fontFamily: 'Open Sans Condensed, sans-serif',
+        fontWeight: 700
+      }
     }, 
   });
  

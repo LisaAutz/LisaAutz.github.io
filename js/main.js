@@ -125,7 +125,7 @@ Matter.World.add(world, mConstraint);
 
 Matter.Events.on(mConstraint, 'mousedown', function (event) {
   if (mConstraint.body == null) {
-    console.log('Boy is null',mConstraint);
+    console.log('Body is null',mConstraint);
 
   } else {
     if (mConstraint.body.label != null) {
