@@ -76,11 +76,27 @@ p {
     justify-content: center;
     flex-direction: column;
     padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 40px #7b7c85;
 }
 .pop-up-content {
     height: 100%;
     overflow: auto;
     padding: 10px;
+}
+.pop-up-content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.pop-up-content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+
+.pop-up-content::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    height: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
 .pop-up-content h1 {
     line-height: 4.5;
@@ -110,6 +126,9 @@ p {
     background-color: #40445e;
     color: #fff;
 }
+.close-btn:hover {
+    background-color: #d0d4ff;
+}
 .close-btn {
     position: absolute;
     right: 8px;
@@ -124,67 +143,6 @@ p {
     height: 50px;
     text-align: center;
     line-height: 50px;
-}
-/*/*
-/* Popup box BEGIN */
-/*.hover_bkgr_fricc{
-    background: transparent;
-    cursor:pointer;
-    display:none;
-    height:10%;
-    position:fixed;
-    text-align:center;
-    top:2000;
-    width:10%;
-    opacity: 0.6;
-}
-.hover_bkgr_fricc .helper{
-    display:inline-block;
-    height:100%;
-    vertical-align:middle;
-    opacity: 0.6;
-}
-.hover_bkgr_fricc > div {
-    box-shadow: 10px 10px 60px #555;
-    display: inline-block;
-    height: auto;
-    max-width: 551px;
-    min-height: 100px;
-    vertical-align: middle;
-    width: 60%;
-    position: relative;
-    border-radius: 8px;
-    padding: 15px 5%;
-    opacity: 0.6;
-}
-.popupCloseButton {
-    border: 3px solid #999;
-    border-radius: 50px;
+    outline: none;
     cursor: pointer;
-    display: inline-block;
-    font-family: arial;
-    font-weight: bold;
-    position: absolute;
-    top: -20px;
-    right: -20px;
-    font-size: 25px;
-    line-height: 30px;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    background: transparent;
 }
-.popupCloseButton:hover {
-    opacity: 0.6;
-}
-.trigger_popup_fricc {
-    cursor: pointer;
-    font-size: 20px;
-    margin: 20px;
-    display: inline-block;
-    font-weight: bold;
-    opacity: 0.6;
-
-}**//*/
-/* Popup box BEGIN */
-

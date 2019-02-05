@@ -125,7 +125,7 @@ Matter.World.add(world, mConstraint);
 
 Matter.Events.on(mConstraint, 'mousedown', function (event) {
   if (mConstraint.body == null) {
-    console.log(mConstraint);
+    console.log('Boy is null',mConstraint);
 
   } else {
     if (mConstraint.body.label != null) {
@@ -135,7 +135,8 @@ Matter.Events.on(mConstraint, 'mousedown', function (event) {
       // For popup content
       if(a.label === 'me') {
         document.getElementById('pop-up-me').style.display = 'block';
-        
+        document.getElementById('pop-up-me').className += ' animated bounceInUp';
+        mConstraint.body = null;
       }
     }
   }

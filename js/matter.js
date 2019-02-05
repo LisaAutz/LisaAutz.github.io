@@ -9040,12 +9040,13 @@ var Mouse = _dereq_('../core/Mouse');
                 }
 
                 c.globalAlpha = 1;
+                // Custom function to adding text for shapes
                 if(part.render.myText) {
                     var el = part.render.myText;
                     c.textAlign = "center";
                     c.textBaseline="middle";
                     c.font = el.fontSize+'px Open Sans, sans-serif';
-                    c.fillStyle = "red";
+                    c.fillStyle = el.color || 'black';
                     c.fillText(el.title,part.position.x,part.position.y);
                 }
         
