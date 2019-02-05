@@ -456,6 +456,9 @@ var smbox2 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
     fillStyle: '#3435ff',
     strokeStyle: '#d3d3d3',
     lineWidth: 2,
+    sprite: {
+      texture: '/images/text/demo.png'
+    }
   }, 
   // sprite:{
   //       texture:'images/Dogs/1.png' 

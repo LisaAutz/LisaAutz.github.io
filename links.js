@@ -1,27 +1,37 @@
-
+/*#########################################
+  -- TEXT for shapes(custom code)--
+  render: {
+    myText: {
+        title: 'Anything',
+        color: 'red',
+        fontSize: 20
+      }
+  }
+##########################################*/
 
 
 
 var blink1 = Matter.Bodies.rectangle(window.innerWidth/1.5, 75, 75, 75, {
-    label: "squarelink1",
+    label: "me",
     density: 0.04,
     friction: 1,
     frictionAir: 0.00001,
     restitution: 0.6,
-    url:'bio.html',
     isStatic:false,
     render: {
       fillStyle: '#8181ff',
       strokeStyle: '#d3d3d3',
       lineWidth: 2,
-      // sprite:{
-      //   texture:'images/Ayla.jpg' 
-      // },
+      myText: {
+        title: 'hello',
+        color: 'red',
+        fontSize: 20
+      }
     }, 
   });
 
 var blink2 = Matter.Bodies.rectangle(window.innerWidth/2, 75, 75, 75, {
-  label: "squarelink2",
+  label: "squarelink22",
   density: 0.04,
   friction: 1,
   frictionAir: 0.00001,

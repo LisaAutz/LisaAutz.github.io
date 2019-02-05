@@ -31,108 +31,121 @@ var MouseConstraint = Matter.MouseConstraint;
 var mConstraint;
 
 function flipMe() {
-  if (flipCount == 0){
-    flip.setAttribute('style','transform:rotate(90deg); transition-duration: 1s;');
+  if (flipCount == 0) {
+    flip.setAttribute('style', 'transform:rotate(90deg); transition-duration: 1s;');
     flipCount += 90
-  } 
+  }
   else {
-    flip.setAttribute('style','transform:rotate('+flipCount+'deg); transition-duration: 1s;');
+    flip.setAttribute('style', 'transform:rotate(' + flipCount + 'deg); transition-duration: 1s;');
   }
   flipCount += 90
 };
 
 var walls = [
-  Matter.Bodies.rectangle(window.innerWidth/2, 0, 4000, 50, { isStatic: true,render: {
-    fillStyle: 'transparent',} }),
-  Matter.Bodies.rectangle(window.innerWidth/2, window.innerHeight, 4000, 50, { isStatic: true,render: {
-    fillStyle: 'transparent',} }),
-  Matter.Bodies.rectangle(window.innerWidth, window.innerHeight/2, 50, 4000, { isStatic: true,render: {
-    fillStyle: 'transparent',} }),
-  Matter.Bodies.rectangle(0, window.innerHeight/2, 50, 4000, { isStatic: true,render: {
-    fillStyle: 'transparent',} })
+  Matter.Bodies.rectangle(window.innerWidth / 2, 0, 4000, 50, {
+    isStatic: true, render: {
+      fillStyle: 'transparent',
+    }
+  }),
+  Matter.Bodies.rectangle(window.innerWidth / 2, window.innerHeight, 4000, 50, {
+    isStatic: true, render: {
+      fillStyle: 'transparent',
+    }
+  }),
+  Matter.Bodies.rectangle(window.innerWidth, window.innerHeight / 2, 50, 4000, {
+    isStatic: true, render: {
+      fillStyle: 'transparent',
+    }
+  }),
+  Matter.Bodies.rectangle(0, window.innerHeight / 2, 50, 4000, {
+    isStatic: true, render: {
+      fillStyle: 'transparent',
+    }
+  })
 ]
 
 
 window.addEventListener("resize", testFunc);
 Matter.World.add(world, linkBodies);
 Matter.World.add(world, fillers);
-Matter.World.add(world, [walls[1],walls[2],walls[3]
+Matter.World.add(world, [walls[1], walls[2], walls[3]
 ]);
 
 
-setTimeout(function(){Matter.World.add(world,walls[0]);}, 4000);
+setTimeout(function () { Matter.World.add(world, walls[0]); }, 4000);
 Matter.Engine.run(engine);
 Matter.Render.run(render);
 
 function testFunc() {
-    Matter.Body.setPosition(walls[2], { x: window.innerWidth, y: window.innerHeight / 2 });
-    Matter.Body.setPosition(walls[1], { x: window.innerWidth / 2, y: window.innerHeight });
-    
-    
+  Matter.Body.setPosition(walls[2], { x: window.innerWidth, y: window.innerHeight / 2 });
+  Matter.Body.setPosition(walls[1], { x: window.innerWidth / 2, y: window.innerHeight });
+
+
 };
 var canvasmouse = Mouse.create(myCanvas);
 var options = {
-    body:null,
-    mouse:canvasmouse,
-    constraint:{
-      stiffness:0,
-      render:{
-        visible:false
-      }  
-    },
-   
+  body: null,
+  mouse: canvasmouse,
+  constraint: {
+    stiffness: 0,
+    render: {
+      visible: false
+    }
+  },
+
 };
 
-function invertGrav(){
-  if(cycle == 0){
+function invertGrav() {
+  if (cycle == 0) {
     engine.world.gravity.y = 0
     engine.world.gravity.x = -0.5;
     cycle += 1
-  } else if (cycle == 1){
+  } else if (cycle == 1) {
     engine.world.gravity.x = 0
     engine.world.gravity.y = -0.5;
     cycle += 1 // cycle = cycle + 1;
-  }else if (cycle == 2){
+  } else if (cycle == 2) {
     engine.world.gravity.y = -0.3;
     engine.world.gravity.x = 0.5
     cycle += 1
-  }else if (cycle == 3){
+  } else if (cycle == 3) {
     engine.world.gravity.x = 0;
     engine.world.gravity.y = 0.35;
     cycle = 0
-  } 
+  }
 }
 
 
 
-mConstraint = MouseConstraint.create(engine,options);
+mConstraint = MouseConstraint.create(engine, options);
 console.log(mConstraint)
-Matter.World.add(world,mConstraint);
+Matter.World.add(world, mConstraint);
 
 
 
-Matter.Events.on(mConstraint,'mousedown',function(event){
-if(mConstraint.body == null){
-console.log(mConstraint);
+Matter.Events.on(mConstraint, 'mousedown', function (event) {
+  if (mConstraint.body == null) {
+    console.log(mConstraint);
 
-}else{
-if(mConstraint.body.label != null){
-a = mConstraint.body;
-a.force = {x:0,y:-17.5};
-console.log(a)
-if(a.label.includes("squarelink")){
-window.open('bio.html', '_blank');
-mConstraint.body = null;
-        }
+  } else {
+    if (mConstraint.body.label != null) {
+      a = mConstraint.body;
+      a.force = { x: 0, y: -17.5 };
+      console.log(a)
+      // For popup content
+      if(a.label === 'me') {
+        document.getElementById('pop-up-me').style.display = 'block';
+        
       }
     }
+  }
 });
 
 
-Matter.Events.on(mConstraint, 'mouseup', function(event) {
+Matter.Events.on(mConstraint, 'mouseup', function (event) {
   mousepos = event.mouse.absolute;
-  list = Matter.Query.point(linkBodies,mousepos)
-  if(list.length == 0){
+  list = Matter.Query.point(linkBodies, mousepos)
+  if (list.length == 0) {
     // for(var i = 0;i < linkBodies.length;i++){
     //   linkBodies[i].render.sprite.texture = "images/Dogs/1.png";
     //   linkBodies[i].render.fillStyle="images/Dogs/2.png";
@@ -144,82 +157,82 @@ Matter.Events.on(mConstraint, 'mouseup', function(event) {
     //   return;
     // }
     return;
-  } else if (list.length != 0){
-    if(list[0].label == 'squarelink1'){
+  } else if (list.length != 0) {
+    if (list[0].label == 'squarelink1') {
       // list[0].render.sprite.texture = '#3435ff'
       // returnColor = list[0]
-    } else if (list[0].label == 'squarelink2'){
-      list[0].render.sprite.texture = 'google.com'
-      returnColor = list[0]
-    } else if (list[0].label == 'squarelink3'){
+    } else if (list[0].label == 'squarelink2') {
+      // list[0].render.sprite.texture = 'google.com'
+      // returnColor = list[0]
+    } else if (list[0].label == 'squarelink3') {
       // list[0].render.sprite.texture = 'images/Ayla.jpg'
       // returnColor = list[0]
-    }else if (list[0].label == 'squarelink4'){
+    } else if (list[0].label == 'squarelink4') {
       // list[0].render.sprite.texture = 'images/Ayla.jpg'
       // returnColor = list[0]
-    }else if (list[0].label == 'squarelink5'){
+    } else if (list[0].label == 'squarelink5') {
       // list[0].render.sprite.texture = 'images/Ayla.jpg'
       // returnColor = list[0]
-    }else if (list[0].label == 'squarelink6'){
+    } else if (list[0].label == 'squarelink6') {
       // list[0].render.sprite.texture = 'images/Ayla.jpg'
       // returnColor = list[0]
-    }else if (list[0].label == 'squarelink7'){
+    } else if (list[0].label == 'squarelink7') {
       // list[0].render.sprite.texture = 'images/Ayla.jpg'
       // returnColor = list[0]
-    }else if (list[0].label == 'squarelink8'){
+    } else if (list[0].label == 'squarelink8') {
       // list[0].render.sprite.texture = 'images/Ayla.jpg'
       // returnColor = list[0]
-    }else if (list[0].label == 'squarelink9'){
+    } else if (list[0].label == 'squarelink9') {
       // list[0].render.sprite.texture = 'images/Ayla.jpg'
       // returnColor = list[0]
-    }else if (list[0].label == 'squarelink10'){
+    } else if (list[0].label == 'squarelink10') {
       // list[0].render.sprite.texture = 'images/Ayla.jpg'
       // returnColor = list[0]
-    }else if (list[0].label == 'squarelink11'){
+    } else if (list[0].label == 'squarelink11') {
       // list[0].render.sprite.texture = 'images/Ayla.jpg'
       // returnColor = list[0]
-    }else if (list[0].label == 'squarelink12'){
+    } else if (list[0].label == 'squarelink12') {
       // list[0].render.sprite.texture = 'images/Ayla.jpg'
       // returnColor = list[0]
-    }else if (list[0].label == 'squarelink13'){
+    } else if (list[0].label == 'squarelink13') {
       // list[0].render.sprite.texture = 'images/Ayla.jpg'
       // returnColor = list[0]
-    }else if (list[0].label == 'squarelink14'){
+    } else if (list[0].label == 'squarelink14') {
       // list[0].render.sprite.texture = 'images/Ayla.jpg'
       // returnColor = list[0]
-    }else if (list[0].label == 'squarelink15'){
+    } else if (list[0].label == 'squarelink15') {
       // list[0].render.sprite.texture = 'images/Ayla.jpg'
       // returnColor = list[0]
-    }else if (list[0].label == 'squarelink16'){
+    } else if (list[0].label == 'squarelink16') {
       // list[0].render.sprite.texture = 'images/Ayla.jpg'
       // returnColor = list[0]
-    }else if (list[0].label == 'squarelink17'){
+    } else if (list[0].label == 'squarelink17') {
       // list[0].render.sprite.texture = 'images/Ayla.jpg'
       // returnColor = list[0]
-    }else if (list[0].label == 'squarelink18'){
+    } else if (list[0].label == 'squarelink18') {
       // list[0].render.sprite.texture = 'images/Ayla.jpg'
       // returnColor = list[0]
-    }else if (list[0].label == 'squarelink19'){
+    } else if (list[0].label == 'squarelink19') {
       // list[0].render.sprite.texture = 'images/Ayla.jpg'
       // returnColor = list[0]
-    }else if (list[0].label == 'squarelink20'){
+    } else if (list[0].label == 'squarelink20') {
       // list[0].render.sprite.texture = 'images/Ayla.jpg'
       // returnColor = list[0]
     }
   }
 
-  $(window).load(function () {
-    $(".trigger_popup_fricc").click(function(){
-       $('.hover_bkgr_fricc').show();
-    });
-    $('.hover_bkgr_fricc').click(function(){
-        $('.hover_bkgr_fricc').hide();
-    });
-    $('.popupCloseButton').click(function(){
-        $('.hover_bkgr_fricc').hide();
-});
+  // $(window).load(function () {
+  //   $(".trigger_popup_fricc").click(function () {
+  //     $('.hover_bkgr_fricc').show();
+  //   });
+  //   $('.hover_bkgr_fricc').click(function () {
+  //     $('.hover_bkgr_fricc').hide();
+  //   });
+  //   $('.popupCloseButton').click(function () {
+  //     $('.hover_bkgr_fricc').hide();
+  //   });
 
-});
+  // });
 
 });
 

@@ -9040,6 +9040,15 @@ var Mouse = _dereq_('../core/Mouse');
                 }
 
                 c.globalAlpha = 1;
+                if(part.render.myText) {
+                    var el = part.render.myText;
+                    c.textAlign = "center";
+                    c.textBaseline="middle";
+                    c.font = el.fontSize+'px Open Sans, sans-serif';
+                    c.fillStyle = "red";
+                    c.fillText(el.title,part.position.x,part.position.y);
+                }
+        
             }
         }
     };

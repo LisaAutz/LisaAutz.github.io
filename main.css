@@ -58,6 +58,17 @@ p {
     background-color: #f2d911;
     
 }
+#pop-up-me {
+    background-color: aliceblue;
+    width: 80%;
+    max-width: 700px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    padding: 50px 100px;
+    color: black;
+}
+#close {position: absolute; right: 30px; top: 20px; font-size: 30px;}
 /*/*
 /* Popup box BEGIN */
 /*.hover_bkgr_fricc{

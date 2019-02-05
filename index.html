@@ -1,88 +1,83 @@
+<!DOCTYPE html>
 
-<!DOCTYPE html>    
 <head>
-    <meta charset="utf-8">
+	<meta charset="utf-8">
 	<style>
 	</style>
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
-	
+
 </head>
 
 <body>
 	<div id="float">
-
-<p>Adam Weissler</p>
-<p></p>
-<img src="images/Adam1.jpg"/>
-<p></p>
-<img src="images/Adam2.jpg"/>
-<p>Ideation. Strategy. Storytelling. Photography + Film.</p>
-<p>adamjweissler[at]gmail.com</p>
-</h1>          
+		<p>Adam Weissler</p>
+		<p></p>
+		<img src="images/Adam1.jpg" />
+		<p></p>
+		<img src="images/Adam2.jpg" />
+		<p>Ideation. Strategy. Storytelling. Photography + Film.</p>
+		<p>adamjweissler[at]gmail.com</p>
+		</h1>
+		<div class="hover_bkgr_fricc" id="pop-up-me" style="display:none">
+			<span class="helper"></span>
+			<div> 
+				<button class="popupCloseButton" id="close" onclick="document.getElementById('pop-up-me').style.display = 'none'">x</button>
+				<p>Add any HTML content<br />inside the popup box!</p>
+			</div>
+		</div>
 	</div>
 
-<!-- <a class="trigger_popup_fricc">Click here to show the popup</a>
+	<!-- <a class="trigger_popup_fricc">Click here to show the popup</a>
 
-<div class="hover_bkgr_fricc">
-    <span class="helper"></span>
-    <div> 
-        <div class="popupCloseButton">x</div>
-        <p>Add any HTML content<br />inside the popup box!</p>
-    </div>
-</div> -->
+	<div class="hover_bkgr_fricc">
+		<span class="helper"></span>
+		<div> 
+			<div class="popupCloseButton">x</div>
+			<p>Add any HTML content<br />inside the popup box!</p>
+		</div>
+	</div> -->
 
 
 	<div onclick="flipMe();invertGrav()">
-			<div id="flip"></div>
+		<div id="flip"></div>
 	</div>
-	
-	<canvas id='c' style = 'position: relative; left: 0px; top: 0px;'>
-	
-	</canvas>
+
+	<canvas id='c' style='position: relative; left: 0px; top: 0px;'></canvas>
 
 	<script>
-		(function() {
-			var 
-				
-				htmlCanvas = document.getElementById('c'),
-			
-			  
-			  	context = htmlCanvas.getContext('2d');
-
-		
-			initialize();
+		(function () {
+			var htmlCanvas = document.getElementById('c'),
+				context = htmlCanvas.getContext('2d');
+				initialize();
 
 			function initialize() {
-			
 				window.addEventListener('resize', resizeCanvas, false);
-				
-			
 				resizeCanvas();
 			}
-				
-						
+
 			function redraw() {
 				context.strokeStyle = 'blue';
 				context.lineWidth = '5';
 				context.strokeRect(0, 0, window.innerWidth, window.innerHeight);
 			}
-		
 
 			function resizeCanvas() {
 				htmlCanvas.width = window.innerWidth;
 				htmlCanvas.height = window.innerHeight;
 				redraw();
 			}
-		
+
 		})();
 
 	</script>
-	
+
 </body>
 
 <script src="matter.js"></script>
 <script src="links.js"></script>
 <script src="filler.js"></script>
+<script src="action.js"></script>
 <script src="main.js"></script>
+
 </html>
