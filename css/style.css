@@ -9,6 +9,7 @@ html, body {
     background-color: #f2d911;
     overflow: hidden; /*  Disable scrollbars */
     display: block;  /* No floating content on sides */
+    font-family: 'Open Sans', sans-serif;
 }
 
 *{
@@ -16,11 +17,15 @@ html, body {
     text-align:center;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
 h1{
     line-height: 200px;
     font-size: 25px;
     letter-spacing: 5px;
-    font-family: 'Open Sans';
+    /* font-family: 'Open Sans'; */
     font-style: smooth;
     font-weight: lighter;
     cursor: default;
@@ -76,6 +81,7 @@ p {
     justify-content: center;
     flex-direction: column;
     padding: 20px;
+    padding-bottom: 40px;
     border-radius: 5px;
     box-shadow: 0px 0px 40px #7b7c85;
 }
@@ -83,6 +89,7 @@ p {
     height: 100%;
     overflow: auto;
     padding: 10px;
+    padding-bottom: 100px;
 }
 .pop-up-content::-webkit-scrollbar {
     width: 12px;
@@ -114,12 +121,21 @@ p {
     color: #939ad2;
     font-weight: bold;
 }
+.margin-top-100 {
+    margin-top: 200px;
+}
+.margin-top-20 {
+    margin-top: 20px;
+}
+.margin-bottom-100 {
+    margin-bottom: 100px;
+}
+
 .pop-up-content h3 {
     line-height: 1.65;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    font-style: italic;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-weight: 700;
+    font-size: 22px;
     color: white;
 }
 #pop-up-me {
