@@ -4,7 +4,9 @@
     myText: {
         title: 'Anything',
         color: 'red',
-        fontSize: 20
+        fontSize: 20,
+        fontFamily: 'Lato',
+        fontWeight: 700
       }
   }
 ##########################################*/
@@ -25,7 +27,9 @@ var blink1 = Matter.Bodies.rectangle(window.innerWidth/1.5, 75, 75, 75, {
       myText: {
         title: 'ME',
         color: 'black',
-        fontSize: 20
+        fontSize: 20,
+        fontFamily: null,
+        fontWeight: 700
       }
     }, 
   });

@@ -9045,7 +9045,15 @@ var Mouse = _dereq_('../core/Mouse');
                     var el = part.render.myText;
                     c.textAlign = "center";
                     c.textBaseline="middle";
-                    c.font = el.fontSize+'px Open Sans, sans-serif';
+
+                    if (el.fontWeight && el.fontFamily) {
+                        c.font = el.fontWeight + ' ' + el.fontSize + 'px ' + el.fontFamily;
+                    } else if (el.fontWeight) {
+                        c.font = el.fontWeight + ' ' + el.fontSize + 'px Open Sans, Arial, Verdana, sans-serif';
+                    } else {
+                        c.font = el.fontSize + 'px Open Sans, sans-serif';
+                    }
+                    
                     c.fillStyle = el.color || 'black';
                     c.fillText(el.title,part.position.x,part.position.y);
                 }
