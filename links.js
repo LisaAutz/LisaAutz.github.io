@@ -23,7 +23,7 @@ var blink1 = Matter.Bodies.rectangle(window.innerWidth/1.5, 75, 75, 75, {
       strokeStyle: '#d3d3d3',
       lineWidth: 2,
       myText: {
-        title: 'hello',
+        title: 'ME',
         color: 'red',
         fontSize: 20
       }
