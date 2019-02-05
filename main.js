@@ -129,7 +129,7 @@ mConstraint.body = null;
 });
 
 
-Matter.Events.on(mConstraint, 'mousemove', function(event) {
+Matter.Events.on(mConstraint, 'mouseup', function(event) {
   mousepos = event.mouse.absolute;
   list = Matter.Query.point(linkBodies,mousepos)
   if(list.length == 0){
@@ -149,8 +149,8 @@ Matter.Events.on(mConstraint, 'mousemove', function(event) {
       // list[0].render.sprite.texture = '#3435ff'
       // returnColor = list[0]
     } else if (list[0].label == 'squarelink2'){
-      // list[0].render.sprite.texture = 'images/Ayla.jpg'
-      // returnColor = list[0]
+      list[0].render.sprite.texture = 'google.com'
+      returnColor = list[0]
     } else if (list[0].label == 'squarelink3'){
       // list[0].render.sprite.texture = 'images/Ayla.jpg'
       // returnColor = list[0]

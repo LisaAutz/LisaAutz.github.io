@@ -367,7 +367,24 @@ var blink19 = Matter.Bodies.circle(window.innerWidth/ 1, 35, 35, {
     }, 
   });
 
+// var blink20 = Matter.Bodies.circle(window.innerWidth/ 1, 30, 30, 30, {
+//     label: "squarelink20",
+//     density: 0.04,
+//     friction: 1,
+//     frictionAir: 0.00001,
+//     restitution: .5,
+//     url:'bio.html',
+//     isStatic:false,
+//     render: {
+//       fillStyle: '#d3d3d3',
+//       strokeStyle: '#d3d3d3',
+//       lineWidth: 2,
+//     //   sprite:{
+//     //   texture:'images/Ayla.jpg'
+//     // },
+//     }, 
+//   });
 
 var linkBodies = [blink1,blink2,blink3,blink4,blink5,blink6,blink7,blink8,blink9,blink10,blink11,blink12,blink13,blink14,blink15,blink16,blink17,blink18,blink19];
-var googlesprite = {xScale: 15, yScale: 15, xOffset: 0.5000000000000001, yOffset: 0.5,}
+var googlesprite = {xScale: 1, yScale: 1, xOffset: 0.5000000000000001, yOffset: 0.5,}
 console.log(linkBodies.length)
