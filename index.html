@@ -1,88 +1,98 @@
+<!DOCTYPE html>
 
-<!DOCTYPE html>    
 <head>
-    <meta charset="utf-8">
-	<style>
-	</style>
-	<link rel="stylesheet" type="text/css" href="main.css">
-	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
-	
+	<meta charset="utf-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:700" rel="stylesheet">	
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
 </head>
 
 <body>
 	<div id="float">
-
-<p>Adam Weissler</p>
-<p></p>
-<img src="images/Adam1.jpg"/>
-<p></p>
-<img src="images/Adam2.jpg"/>
-<p>Ideation. Strategy. Storytelling. Photography + Film.</p>
-<p>adamjweissler[at]gmail.com</p>
-</h1>          
+		<p>Adam Weissler</p>
+		<p></p>
+		<img src="images/Adam1.jpg" />
+		<p></p>
+		<img src="images/Adam2.jpg" />
+		<p>Ideation. Strategy. Storytelling. Photography + Film.</p>
+		<p>adamjweissler[at]gmail.com</p>
+		</h1>
 	</div>
 
-<!-- <a class="trigger_popup_fricc">Click here to show the popup</a>
-
-<div class="hover_bkgr_fricc">
-    <span class="helper"></span>
-    <div> 
-        <div class="popupCloseButton">x</div>
-        <p>Add any HTML content<br />inside the popup box!</p>
-    </div>
-</div> -->
+	<!-- ********  About Me POP UP STARTS HERE  ************ -->
+	<div id="pop-up-me" class="pop-up">
+		<button id="close" class="close-btn">X</button>
+		<div class="pop-up-content">
+			<h1>ME</h1>
+			<p>
+				A copywriter and project manager by trade, I have had the privilege of working with a
+				wide range of clients across a variety of projects that include commercial advertising, 
+				television and film production, digital + social media marketing, print and out of home design,
+				political campaign management, and policy/grant writing. 
+			</p>
+			<p>
+				Past and current clients include Google, Reddit, Dr. Pepper, United Way, and The California 
+				Endowment as well as various political campaigns on national and local levels—if you want a 
+				full and exhaustive resume, you can check it out <a href="https://www.linkedin.com/in/adam-weissler-66879a1a/">here</a>. 
+			</p>
+			<p>
+				Past work experience includes stints at Deutsch, Not Impossible Labs, Brave New Foundation, and the White House.
+			</p>
+			<p>
+				I currently work at Swell Creative Group (<a href="https://swellcreativegroup.com/">link</a>), a social justice firm in Los Angeles, where I help to develop content, strategy, and communication tactics to help translate digital organizing into real world activism. 
+			</p>
+			<h3 class="margin-top-100">
+				TL;DR: Multidisciplinary creative thinker, neurotic optimist, and eternally hopeful copywriter and producer with a *splash* of anarchy. 
+			</h3>
+			<h3 class="margin-bottom-100 margin-top-20">
+				<ins>Steely Dan meets grindcore, but for social change.</ins>
+			</h3>
+		</div>
+	</div>
+	<!-- ******** ME POP UP ENDS  ************ -->
 
 
 	<div onclick="flipMe();invertGrav()">
-			<div id="flip"></div>
+		<div id="flip"></div>
 	</div>
-	
-	<canvas id='c' style = 'position: relative; left: 0px; top: 0px;'>
-	
-	</canvas>
+
+	<canvas id='c' style='position: relative; left: 0px; top: 0px;'></canvas>
 
 	<script>
-		(function() {
-			var 
-				
-				htmlCanvas = document.getElementById('c'),
-			
-			  
-			  	context = htmlCanvas.getContext('2d');
-
-		
-			initialize();
+		(function () {
+			var htmlCanvas = document.getElementById('c'),
+				context = htmlCanvas.getContext('2d');
+				initialize();
 
 			function initialize() {
-			
 				window.addEventListener('resize', resizeCanvas, false);
-				
-			
 				resizeCanvas();
 			}
-				
-						
+
 			function redraw() {
 				context.strokeStyle = 'blue';
 				context.lineWidth = '5';
 				context.strokeRect(0, 0, window.innerWidth, window.innerHeight);
 			}
-		
 
 			function resizeCanvas() {
 				htmlCanvas.width = window.innerWidth;
 				htmlCanvas.height = window.innerHeight;
 				redraw();
 			}
-		
+
 		})();
 
 	</script>
-	
+
 </body>
 
-<script src="matter.js"></script>
-<script src="links.js"></script>
-<script src="filler.js"></script>
-<script src="main.js"></script>
+<script src="js/matter.js"></script>
+<script src="js/links.js"></script>
+<script src="js/filler.js"></script>
+<script src="js/main.js"></script>
+<script src="js/action.js"></script>
+
 </html>
