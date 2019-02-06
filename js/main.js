@@ -66,9 +66,9 @@ var walls = [
 
 
 window.addEventListener("resize", testFunc);
-Matter.World.add(world, linkBodies);
-Matter.World.add(world, fillers);
-Matter.World.add(world, [walls[1], walls[2], walls[3]
+  Matter.World.add(world, linkBodies);
+  Matter.World.add(world, fillers);
+  Matter.World.add(world, [walls[1], walls[2], walls[3]
 ]);
 
 
@@ -134,6 +134,11 @@ Matter.Events.on(mConstraint, 'mousedown', function (event) {
       console.log(a)
       // For popup content
       if(a.label === 'me') {
+        document.getElementById('pop-up-me').style.display = 'block';
+        document.getElementById('pop-up-me').className += ' animated bounceInUp';
+        mConstraint.body = null;
+      }
+      if(a.label === 'lightball11') {
         document.getElementById('pop-up-me').style.display = 'block';
         document.getElementById('pop-up-me').className += ' animated bounceInUp';
         mConstraint.body = null;

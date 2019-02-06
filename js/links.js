@@ -122,7 +122,7 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
   });
  
   var blink7 = Matter.Bodies.rectangle(window.innerWidth/ 2, 75, 75, 75, {
-    label: "squarelink7",
+    label: "recent",
     density: 0.04,
     friction: 1,
     frictionAir: 0.00001,
@@ -133,9 +133,15 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
       fillStyle: '#8181ff',
       strokeStyle: '#d3d3d3',
       lineWidth: 2,
-      // sprite:{
-      // texture:'images/Dogs/7.png'
-      // },
+      myText: {
+        title: 'Work',
+        color: 'white',
+        fontSize: 10,
+        fontFamily: 'Open Sans Condensed, sans-serif',
+        fontFamily: '700'
+      },
+      xScale: 1,
+      yScale: 1
     }, 
   });
 
@@ -160,7 +166,7 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
 // circles
 
   var blink9 = Matter.Bodies.circle(window.innerWidth/ 5, 45, 45, {
-    label: "squarelink9",
+    label: "lightball1",
     density: 0.04,
     friction: 1,
     frictionAir: 0.00001,
@@ -179,7 +185,7 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
 
 
   var blink10 = Matter.Bodies.circle(window.innerWidth/ 4, 35, 35, {
-    label: "squarelink10",
+    label: "lightball2",
     density: 0.04,
     friction: 1,
     frictionAir: 0.00001,
@@ -198,7 +204,7 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
 
 
   var blink11 = Matter.Bodies.circle(window.innerWidth/ 1, 35, 35, {
-    label: "squarelink11",
+    label: "lightball3",
     density: 0.04,
     friction: 1,
     frictionAir: 0.00001,
@@ -216,7 +222,7 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
   });
 
   var blink12 = Matter.Bodies.circle(window.innerWidth/ 3, 35, 35, {
-    label: "squarelink12",
+    label: "lightball4",
     density: 0.04,
     friction: 1,
     frictionAir: 0.00001,
@@ -234,7 +240,7 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
   });
 
   var blink13 = Matter.Bodies.circle(window.innerWidth/ 1, 20, 20, {
-    label: "squarelink13",
+    label: "lightball15",
     density: 0.04,
     friction: 1,
     frictionAir: 0.00001,
@@ -252,7 +258,7 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
   });
 
    var blink14 = Matter.Bodies.circle(window.innerWidth/ 2, 40, 40, {
-    label: "squarelink14",
+    label: "lightball6",
     density: 0.04,
     friction: 1,
     frictionAir: 0.00001,
@@ -271,7 +277,7 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
 
 
    var blink15 = Matter.Bodies.circle(window.innerWidth/ 2, 40, 40, {
-    label: "squarelink15",
+    label: "lightball7",
     density: 0.04,
     friction: 1,
     frictionAir: 0.00001,
@@ -288,7 +294,7 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
     }, 
   });
 var blink16 = Matter.Bodies.circle(window.innerWidth/ 1, 20, 20, {
-    label: "squarelink16",
+    label: "lightball8",
     density: 0.04,
     friction: 1,
     frictionAir: 0.00001,
@@ -306,7 +312,7 @@ var blink16 = Matter.Bodies.circle(window.innerWidth/ 1, 20, 20, {
   });
 
 var blink16 = Matter.Bodies.circle(window.innerWidth/ 1, 20, 20, {
-    label: "squarelink16",
+    label: "lightball9",
     density: 0.04,
     friction: 1,
     frictionAir: 0.00001,
@@ -325,7 +331,7 @@ var blink16 = Matter.Bodies.circle(window.innerWidth/ 1, 20, 20, {
 
 
 var blink17 = Matter.Bodies.circle(window.innerWidth/ 5, 20, 20, {
-    label: "squarelink17",
+    label: "lightball10",
     density: 0.04,
     friction: 1,
     frictionAir: 0.00001,
@@ -360,8 +366,8 @@ var blink18 = Matter.Bodies.rectangle(window.innerWidth/ 5, 40, 40, 40, {
     }, 
   });
 
-var blink19 = Matter.Bodies.circle(window.innerWidth/ 1, 35, 35, {
-    label: "squarelink19",
+var blink19 = Matter.Bodies.circle(window.innerWidth/ 5, 55, 55, {
+    label: "lightball11",
     density: 0.04,
     friction: 1,
     frictionAir: 0.00001,
@@ -372,29 +378,15 @@ var blink19 = Matter.Bodies.circle(window.innerWidth/ 1, 35, 35, {
       fillStyle: '#d3d3d3',
       strokeStyle: '#d3d3d3',
       lineWidth: 2,
-    //   sprite:{
-    //   texture:'images/Ayla.jpg'
-    // },
+      myText: {
+        title: 'Recent Work',
+        fontSize: 16,
+        fontFamily:'Open Sans, sans-serif',
+        fontWeight: 700
+      }
     }, 
   });
 
-// var blink20 = Matter.Bodies.circle(window.innerWidth/ 1, 30, 30, 30, {
-//     label: "squarelink20",
-//     density: 0.04,
-//     friction: 1,
-//     frictionAir: 0.00001,
-//     restitution: .5,
-//     url:'bio.html',
-//     isStatic:false,
-//     render: {
-//       fillStyle: '#d3d3d3',
-//       strokeStyle: '#d3d3d3',
-//       lineWidth: 2,
-//     //   sprite:{
-//     //   texture:'images/Ayla.jpg'
-//     // },
-//     }, 
-//   });
 
 var linkBodies = [blink1,blink2,blink3,blink4,blink5,blink6,blink7,blink8,blink9,blink10,blink11,blink12,blink13,blink14,blink15,blink16,blink17,blink18,blink19];
 var googlesprite = {xScale: 1, yScale: 1, xOffset: 0.5000000000000001, yOffset: 0.5,}
