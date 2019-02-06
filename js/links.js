@@ -237,8 +237,8 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
     }, 
   });
 
-  var blink13 = Matter.Bodies.circle(window.innerWidth/ 1, 20, 20, {
-    label: "lightball15",
+  var blink13 = Matter.Bodies.circle(window.innerWidth/ 1, 50, 50, {
+    label: "testimonials",
     density: 0.04,
     friction: 1,
     frictionAir: 0.00001,
@@ -249,9 +249,16 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
       fillStyle: '#d3d3d3',
       strokeStyle: '#d3d3d3',
       lineWidth: 2,
-    //   sprite:{
-    //   texture:'images/Ayla.jpg'
-    // },
+      myText: {
+        title: 'Friend Testimonials',
+        fontSize: 15,
+        color: 'black',
+        fontFamily:'Open Sans, sans-serif',
+        fontWeight: 700,
+        isSplit: true,
+        offsetTop: 0,
+        lineHeight: 18,
+      }
     }, 
   });
 

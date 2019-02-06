@@ -1,5 +1,5 @@
-var lgball1 = Matter.Bodies.circle(window.innerWidth/2, 35, 35, {
-  label: "ball1",
+var lgball1 = Matter.Bodies.circle(window.innerWidth/2, 55, 55, {
+  label: "listen",
   density: 0.04,
   friction: 0.01,
   frictionAir: 0.00001,
@@ -10,6 +10,16 @@ var lgball1 = Matter.Bodies.circle(window.innerWidth/2, 35, 35, {
     fillStyle: '#3435ff',
     strokeStyle: '#d3d3d3',
     lineWidth: 3,
+    myText: {
+      title: 'What I’m listening to',
+      fontSize: 15,
+      color: 'white',
+      fontFamily:'Open Sans, sans-serif',
+      fontWeight: 700,
+      isSplit: true,
+      offsetTop: 10,
+      lineHeight: 18,
+    }
   }, 
 });
 

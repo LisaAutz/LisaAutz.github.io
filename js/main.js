@@ -153,6 +153,16 @@ Matter.Events.on(mConstraint, 'mousedown', function (event) {
         document.getElementById('recent3').className += ' animated bounceInUp';
         mConstraint.body = null;
       }
+      if(a.label === 'listen') {
+        document.getElementById('listen').style.display = 'block';
+        document.getElementById('listen').className += ' animated bounceInUp';
+        mConstraint.body = null;
+      }
+      if(a.label === 'testimonials') {
+        document.getElementById('testimonials').style.display = 'block';
+        document.getElementById('testimonials').className += ' animated bounceInUp';
+        mConstraint.body = null;
+      }
     }
   }
 });
