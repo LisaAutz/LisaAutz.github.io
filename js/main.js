@@ -134,13 +134,23 @@ Matter.Events.on(mConstraint, 'mousedown', function (event) {
       console.log(a)
       // For popup content
       if(a.label === 'me') {
-        document.getElementById('pop-up-me').style.display = 'block';
-        document.getElementById('pop-up-me').className += ' animated bounceInUp';
+        document.getElementById('me').style.display = 'block';
+        document.getElementById('me').className += ' animated bounceInUp';
         mConstraint.body = null;
       }
-      if(a.label === 'lightball11') {
-        document.getElementById('pop-up-me').style.display = 'block';
-        document.getElementById('pop-up-me').className += ' animated bounceInUp';
+      if(a.label === 'recent1') {
+        document.getElementById('recent1').style.display = 'block';
+        document.getElementById('recent1').className += ' animated bounceInUp';
+        mConstraint.body = null;
+      }
+      if(a.label === 'recent2') {
+        document.getElementById('recent2').style.display = 'block';
+        document.getElementById('recent2').className += ' animated bounceInUp';
+        mConstraint.body = null;
+      }
+      if(a.label === 'recent3') {
+        document.getElementById('recent3').style.display = 'block';
+        document.getElementById('recent3').className += ' animated bounceInUp';
         mConstraint.body = null;
       }
     }

@@ -22,8 +22,8 @@
 	</div>
 
 	<!-- ********  About Me POP UP STARTS HERE  ************ -->
-	<div id="pop-up-me" class="pop-up">
-		<button id="close" class="close-btn">X</button>
+	<div id="me" class="pop-up">
+		<button data-target="me" class="close-btn" onclick="closePopUp(this)">X</button>
 		<div class="pop-up-content">
 			<h1>ME</h1>
 			<p>
@@ -52,6 +52,61 @@
 		</div>
 	</div>
 	<!-- ******** ME POP UP ENDS  ************ -->
+
+	<!-- ********  RECENT1 POP UP STARTS HERE  ************ -->
+	<div id="recent1" class="pop-up">
+		<button data-target="recent1" class="close-btn" onclick="closePopUp(this)">X</button>
+		<div class="pop-up-content">
+			<h1>Recent work: Everyone In</h1>
+			<iframe class="media" width="560" height="315" src="https://www.youtube.com/embed/RGnr49b4Nxw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<p>
+				Launched in early 2018, Everyone In is a campaign to end homelessness in L.A. County through supportive 
+				housing and wraparound medical, mental health, and social services. Through compelling content, 
+				digital organizing and activist training, and elevating the stories of advocates and Angelenos
+				with lived experience, Everyone In has become a force to energize communities about homelessness 
+				solutions and hold elected officials accountable. 
+			</p>
+			<p>
+				See more: <a href="https://www.everyoneinla.org">www.everyoneinla.org</a>
+			</p>
+			
+		</div>
+	</div>
+	<!-- ******** RECENT1 POP UP ENDS  ************ -->
+
+	<!-- ********  RECENT2 POP UP STARTS HERE  ************ -->
+	<div id="recent2" class="pop-up">
+		<button data-target="recent2" class="close-btn" onclick="closePopUp(this)">X</button>
+		<div class="pop-up-content">
+			<h1>Recent work: Everyone In</h1>
+			<iframe class="media" width="560" height="315" src="https://www.youtube.com/embed/Rh5y4w_R_UM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>			
+			<p>
+				The Safe Clean Water project was an educational campaign based on raising awareness for Measure W, a vital parcel tax that would fund projects to help improve water infrastructure throughout L.A. County. Tasked with leading the digital campaign, we created clever and engaging content paired with a robust and hyper-targeted advertising program along with out of home executions throughout Los Angeles. The net result? A victory at the ballots this November.  
+			</p>
+		</div>
+	</div>
+	<!-- ******** RECENT2 POP UP ENDS  ************ -->
+	<!-- ********  RECENT3 POP UP STARTS HERE  ************ -->
+	<div id="recent3" class="pop-up">
+		<button data-target="recent3" class="close-btn" onclick="closePopUp(this)">X</button>
+		<div class="pop-up-content">
+			<h1>Recent work: I AM 2018</h1>
+			<div class="media images">
+				<img src="images/media/1.jpg" onclick="scaleImg(this)" alt="Recent work: I AM 2018 Image 1" data-origin="-50%">
+				<img src="images/media/2.jpg" onclick="scaleImg(this)" alt="Recent work: I AM 2018 Image 2" data-origin="cenetr">
+				<img src="images/media/3.jpg" onclick="scaleImg(this)" alt="Recent work: I AM 2018 Image 3" data-origin="150%">
+			</div>			
+			<p>
+				In light of the Janus decision and the 50th anniversary of Martin Luther King’s assassination, 
+				AFSCME, the Church of God in Christ, and dozens of other labor organizations and nonprofits 
+				came together in Memphis for a three day protest and reaffirmation of Martin Luther King’s 
+				legacy: equality and justice for all people. Helping lead the digital, outreach, and organizing 
+				campaign, we helped build a powerful show of unity and strength—featuring Senator Bernie 
+				Sanders, Reverend Al Sharpton, Jesse Jackson, and Common.   
+			</p>
+		</div>
+	</div>
+	<!-- ******** RECENT3 POP UP ENDS  ************ -->
 
 
 	<div onclick="flipMe();invertGrav()">

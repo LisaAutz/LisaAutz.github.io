@@ -84,6 +84,8 @@ p {
     padding-bottom: 40px;
     border-radius: 5px;
     box-shadow: 0px 0px 40px #7b7c85;
+    background-color: #40445e;
+    color: #fff;
 }
 .pop-up-content {
     height: 100%;
@@ -138,10 +140,7 @@ p {
     font-size: 22px;
     color: white;
 }
-#pop-up-me {
-    background-color: #40445e;
-    color: #fff;
-}
+
 .close-btn:hover {
     background-color: #d0d4ff;
 }
@@ -161,4 +160,41 @@ p {
     line-height: 50px;
     outline: none;
     cursor: pointer;
+}
+
+.pop-up iframe {
+    min-height: 315px;
+    /* height: calc((100vw - 20%) / 2);
+    max-height: 350px; */
+}
+
+.media {
+    margin: 50px auto 30px;
+}
+.images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.images img {
+    width: 33%;
+    transition: 1s;
+}
+.images img:nth-of-type(2):hover {
+    transform: scale(2);
+    transition: 1s;
+    transform-origin: center;
+    z-index: 1;
+}
+.images img:first-of-type:hover {
+    transform-origin: -50%;
+    transform: scale(2);
+    transition: 1s;
+    z-index: 1;
+}
+.images img:last-of-type:hover {
+    transform-origin: 150%;
+    transform: scale(2);
+    transition: 1s;
+    z-index: 1;
 }

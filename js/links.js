@@ -48,8 +48,8 @@ var blink2 = Matter.Bodies.rectangle(window.innerWidth/2, 75, 75, 75, {
   }, 
 });
 
-var blink3 = Matter.Bodies.rectangle(window.innerWidth/3, 75, 75, 75, {
-  label: "squarelink3",
+var blink3 = Matter.Bodies.rectangle(window.innerWidth/3, 95, 95, 95, {
+  label: "recent3",
   density: 0.04,
   friction: 1,
   frictionAir: 0.00001,
@@ -60,9 +60,16 @@ var blink3 = Matter.Bodies.rectangle(window.innerWidth/3, 75, 75, 75, {
     fillStyle: '#8181ff',
     strokeStyle: '#d3d3d3',
     lineWidth: 2,
-    // sprite:{
-    // texture:'images/Ayla.jpg'
-    // },
+    myText: {
+      title: 'Recent work: I AM 2018',
+      fontSize: 15,
+      color: 'white',
+      fontFamily:'Open Sans, sans-serif',
+      fontWeight: 700,
+      isSplit: true,
+      offsetTop: 15,
+      lineHeight: 18,
+    }
   }, 
 });
 
@@ -125,7 +132,7 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
   });
  
   var blink7 = Matter.Bodies.rectangle(window.innerWidth/ 2, 75, 75, 75, {
-    label: "recent",
+    label: "squarelink7",
     density: 0.04,
     friction: 1,
     frictionAir: 0.00001,
@@ -135,16 +142,7 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
     render: {
       fillStyle: '#8181ff',
       strokeStyle: '#d3d3d3',
-      lineWidth: 2,
-      myText: {
-        title: 'Work',
-        color: 'white',
-        fontSize: 10,
-        fontFamily: 'Open Sans Condensed, sans-serif',
-        fontFamily: '700'
-      },
-      xScale: 1,
-      yScale: 1
+      lineWidth: 2
     }, 
   });
 
@@ -199,9 +197,6 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
       fillStyle: '#d3d3d3',
       strokeStyle: '#d3d3d3',
       lineWidth: 2,
-    //   sprite:{
-    //   texture:'images/Ayla.jpg'
-    // },
     }, 
   });
 
@@ -393,7 +388,32 @@ var blink19 = Matter.Bodies.circle(window.innerWidth/ 5, 55, 55, {
     }, 
   });
 
+  var blink20 = Matter.Bodies.circle(window.innerWidth/ 2, 55, 55, {
+    label: "recent2",
+    density: 0.04,
+    friction: 1,
+    frictionAir: 0.00001,
+    restitution: .5,
+    url: null,
+    isStatic:false,
+    render: {
+      fillStyle: '#3435ff',
+      strokeStyle: '#fff',
+      lineWidth: 2,
+      myText: {
+        title: 'Recent work: Safe Clean Water',
+        fontSize: 15,
+        color: 'white',
+        fontFamily:'Open Sans, sans-serif',
+        fontWeight: 700,
+        isSplit: true,
+        offsetTop: 13,
+        lineHeight: 18,
+      }
+    }, 
+  });
 
-var linkBodies = [blink1,blink2,blink3,blink4,blink5,blink6,blink7,blink8,blink9,blink10,blink11,blink12,blink13,blink14,blink15,blink16,blink17,blink18,blink19];
+
+var linkBodies = [blink1,blink2,blink3,blink4,blink5,blink6,blink7,blink8,blink9,blink10,blink11,blink12,blink13,blink14,blink15,blink16,blink17,blink18,blink19, blink20];
 var googlesprite = {xScale: 1, yScale: 1, xOffset: 0.5000000000000001, yOffset: 0.5,}
 console.log(linkBodies.length)
