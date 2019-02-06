@@ -420,10 +420,7 @@ var mdbox4 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
     fillStyle: '#3435ff',
     strokeStyle: '#d3d3d3',
     lineWidth: 2,
-  }, 
-  // sprite:{
-  //       texture:'images/Dogs/3.png' 
-  //     },
+  }
 });
 
 var smbox1 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
@@ -438,10 +435,7 @@ var smbox1 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
     fillStyle: '#3435ff',
     strokeStyle: '#d3d3d3',
     lineWidth: 2,
-  },
-  // sprite:{
-  //       texture:'images/Dogs/2.png' 
-  //     }, 
+  }
 });
 
 var smbox2 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
@@ -456,10 +450,10 @@ var smbox2 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
     fillStyle: '#3435ff',
     strokeStyle: '#d3d3d3',
     lineWidth: 2,
+    // sprite: {
+    //   texture: '/images/text/demo.png'
+    // }
   }, 
-  // sprite:{
-  //       texture:'images/Dogs/1.png' 
-  //     }, 
 });
 // mdball1,mdball2,mdball3,mdball4,mdball5,mdball6,
 // smball1,smball2,smball3,smball4,smball5,smball6,

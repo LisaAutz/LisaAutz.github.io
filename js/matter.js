@@ -9040,6 +9040,24 @@ var Mouse = _dereq_('../core/Mouse');
                 }
 
                 c.globalAlpha = 1;
+                // Custom function to adding text for shapes
+                if(part.render.myText) {
+                    var el = part.render.myText;
+                    c.textAlign = "center";
+                    c.textBaseline="middle";
+
+                    if (el.fontWeight && el.fontFamily) {
+                        c.font = el.fontWeight + ' ' + el.fontSize + 'px ' + el.fontFamily;
+                    } else if (el.fontWeight) {
+                        c.font = el.fontWeight + ' ' + el.fontSize + 'px Open Sans, Arial, Verdana, sans-serif';
+                    } else {
+                        c.font = el.fontSize + 'px Open Sans, sans-serif';
+                    }
+                    
+                    c.fillStyle = el.color || 'black';
+                    c.fillText(el.title,part.position.x,part.position.y);
+                }
+        
             }
         }
     };

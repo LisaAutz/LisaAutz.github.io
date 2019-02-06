@@ -1,4 +1,15 @@
-
+/*#########################################
+  -- TEXT for shapes(custom code)--
+  render: {
+    myText: {
+        title: 'Anything',
+        color: 'red',
+        fontSize: 20,
+        fontFamily: 'Lato',
+        fontWeight: 700
+      }
+  }
+##########################################*/
 
 
 
@@ -8,15 +19,11 @@ var blink1 = Matter.Bodies.rectangle(window.innerWidth/1.5, 75, 75, 75, {
     friction: 1,
     frictionAir: 0.00001,
     restitution: 0.6,
-    url:'bio.html',
     isStatic:false,
     render: {
       fillStyle: '#8181ff',
       strokeStyle: '#d3d3d3',
       lineWidth: 2,
-      // sprite:{
-      //   texture:'images/Ayla.jpg' 
-      // },
     }, 
   });
 
@@ -93,7 +100,7 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
   });
 
   var blink6 = Matter.Bodies.rectangle(window.innerWidth/ 2, 75, 75, 75, {
-    label: "squarelink6",
+    label: "me",
     density: 0.04,
     friction: 1,
     frictionAir: 0.00001,
@@ -104,9 +111,13 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
       fillStyle: '#8181ff',
       strokeStyle: '#d3d3d3',
       lineWidth: 2,
-      // sprite:{
-      // texture:'images/Ayla.jpg'
-      // },
+      myText: {
+        title: 'ME',
+        color: 'white',
+        fontSize: 24,
+        fontFamily: 'Open Sans Condensed, sans-serif',
+        fontWeight: 700
+      }
     }, 
   });
  
@@ -134,7 +145,6 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
     friction: 1,
     frictionAir: 0.00001,
     restitution: 0.6,
-    url:'bio.html',
     isStatic:false,
     render: {
       fillStyle: '#8181ff',
