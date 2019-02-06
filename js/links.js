@@ -164,7 +164,6 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
     friction: 1,
     frictionAir: 0.00001,
     restitution: 0.6,
-    url:'bio.html',
     isStatic:false,
     render: {
       fillStyle: '#d3d3d3',
