@@ -208,6 +208,8 @@ Matter.Events.on(mConstraint, 'mouseup', function(event) {
     }
   }
 
+
+
   $(window).load(function () {
     $(".trigger_popup_fricc").click(function(){
        $('.hover_bkgr_fricc').show();
@@ -224,6 +226,13 @@ Matter.Events.on(mConstraint, 'mouseup', function(event) {
 });
 
 
+
+
+//   // When the user clicks on <div>, open the popup
+// function myFunction() {
+//   var popup = document.getElementById("myPopup");
+//   popup.classList.toggle("show");
+// }
 
 // a.render.sprite = {
 //   xOffset:0.5,
