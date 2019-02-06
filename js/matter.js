@@ -9045,6 +9045,7 @@ var Mouse = _dereq_('../core/Mouse');
                     var el = part.render.myText;
                     c.textAlign = "center";
                     c.textBaseline="middle";
+                    c.fillStyle = el.color || 'black';
 
                     if (el.fontWeight && el.fontFamily) {
                         c.font = el.fontWeight + ' ' + el.fontSize + 'px ' + el.fontFamily;
@@ -9054,8 +9055,24 @@ var Mouse = _dereq_('../core/Mouse');
                         c.font = el.fontSize + 'px Open Sans, sans-serif';
                     }
                     
-                    c.fillStyle = el.color || 'black';
-                    c.fillText(el.title,part.position.x,part.position.y);
+                    if(el.isSplit) {
+                        var titleSplit = el.title.split(' ');
+                        var offsetTop = el.offsetTop || 0; // for position text from top
+                        var lineHeight = el.lineHeight || el.fontSize || 18;
+
+                        titleSplit.forEach(function(item, i) {
+                            if(i == 0) {
+                                c.fillText(item,part.position.x,(part.position.y - lineHeight) - offsetTop);
+                            } else {
+                                c.fillText(item,part.position.x,((i-1) * lineHeight - offsetTop) + part.position.y);
+                            }
+                        }); 
+                    } else {
+                        c.fillText(el.title,part.position.x,part.position.y);
+                    }
+                   
+                   
+                    
                 }
         
             }

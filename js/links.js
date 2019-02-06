@@ -6,7 +6,10 @@
         color: 'red',
         fontSize: 20,
         fontFamily: 'Lato',
-        fontWeight: 700
+        fontWeight: 700,
+        isSplit: true, // if text longer than 1 word split it to line break
+        offsetTop: 10 // Position text from top vertically
+        lineHeight: 20, // lineheight between texts
       }
   }
 ##########################################*/
@@ -367,22 +370,25 @@ var blink18 = Matter.Bodies.rectangle(window.innerWidth/ 5, 40, 40, 40, {
   });
 
 var blink19 = Matter.Bodies.circle(window.innerWidth/ 5, 55, 55, {
-    label: "lightball11",
+    label: "recent1",
     density: 0.04,
     friction: 1,
     frictionAir: 0.00001,
     restitution: .5,
-    url:'bio.html',
+    url: null,
     isStatic:false,
     render: {
       fillStyle: '#d3d3d3',
       strokeStyle: '#d3d3d3',
       lineWidth: 2,
       myText: {
-        title: 'Recent Work',
+        title: 'Recent work: Everyone In',
         fontSize: 16,
         fontFamily:'Open Sans, sans-serif',
-        fontWeight: 700
+        fontWeight: 700,
+        isSplit: true,
+        offsetTop: 5,
+        lineHeight: 18,
       }
     }, 
   });
