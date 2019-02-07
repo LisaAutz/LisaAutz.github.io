@@ -1,104 +1,5 @@
-// var smball1 = Matter.Bodies.circle(window.innerWidth/1.5, -1200, 33, {
-//     label: "ball",
-//     density: 0.04,
-//     friction: 0.01,
-//     frictionAir: 0.00001,
-//     restitution: 0.6,
-//     url:"https://www.google.com",
-//     isStatic:false,
-//     render: {
-//       fillStyle: 'transparent',
-//       strokeStyle: '#424248',
-//       lineWidth: 3,
-//     },
-//   });
-
-// var smball2 = Matter.Bodies.circle(window.innerWidth/2, -1270, 33, {
-//   label: "ball",
-//   density: 0.04,
-//   friction: 0.01,
-//   frictionAir: 0.00001,
-//   restitution: 0.6,
-//   url:"https://www.google.com",
-//   isStatic:false,
-//   render: {
-//     fillStyle: 'transparent',
-//     strokeStyle: '#424248',
-//     lineWidth: 3,
-//   }, 
-// });
-
-// var smball3 = Matter.Bodies.circle(window.innerWidth/3, -1400, 33, {
-//   label: "ball",
-//   density: 0.04,
-//   friction: 0.01,
-//   frictionAir: 0.00001,
-//   restitution: 0.6,
-//   url:"https://www.google.com",
-//   isStatic:false,
-//   render: {
-//     fillStyle: 'transparent',
-//     strokeStyle: '#424248',
-//     lineWidth: 3,
-//   }, 
-// });
-
-// var smball4 = Matter.Bodies.circle(window.innerWidth - 100, -1500, 33, {
-//   label: "ball",
-//   density: 0.04,
-//   friction: 0.01,
-//   frictionAir: 0.00001,
-//   restitution: 0.6,
-//   url:"https://www.google.com",
-//   isStatic:false,
-//   render: {
-//     fillStyle: 'images/Dogs/2.png',
-//     strokeStyle: '#424248',
-//     lineWidth: 3,
-//   }, 
-//   sprite:{
-//         texture:'images/Dogs/2.png' 
-//       },
-// });
-
-// var smball5 = Matter.Bodies.circle(window.innerWidth/4, -1450, 33, {
-//   label: "ball",
-//   density: 0.04,
-//   friction: 0.01,
-//   frictionAir: 0.00001,
-//   restitution: 0.6,
-//   url:"https://www.google.com",
-//   isStatic:false,
-//   render: {
-//     fillStyle: 'transparent',
-//     strokeStyle: '#424248',
-//     lineWidth: 3,
-//   },
-//   sprite:{
-//         texture:'images/Ayla.jpg' 
-//       }, 
-// });
-
-// var smball6 = Matter.Bodies.circle(window.innerWidth/2, -1400, 33, {
-//   label: "ball",
-//   density: 0.04,
-//   friction: 0.01,
-//   frictionAir: 0.00001,
-//   restitution: 0.6,
-//   url:"https://www.google.com",
-//   isStatic:false,
-//   render: {
-//     fillStyle: 'transparent',
-//     strokeStyle: '#424248',
-//     lineWidth: 3,
-//   }, 
-//   sprite:{
-//         texture:'images/Ayla.jpg' 
-//       },
-// });
-
-var lgball1 = Matter.Bodies.circle(window.innerWidth/2, 35, 35, {
-  label: "ball",
+var lgball1 = Matter.Bodies.circle(window.innerWidth/2, 55, 55, {
+  label: "listen",
   density: 0.04,
   friction: 0.01,
   frictionAir: 0.00001,
@@ -109,152 +10,21 @@ var lgball1 = Matter.Bodies.circle(window.innerWidth/2, 35, 35, {
     fillStyle: '#3435ff',
     strokeStyle: '#d3d3d3',
     lineWidth: 3,
-  }, 
-  // sprite:{
-  //       texture: 'images/Ayla.jpg' 
-  //     },
-});
-
-var lgball1 = Matter.Bodies.circle(window.innerWidth/2, 35, 35, {
-  label: "ball",
-  density: 0.04,
-  friction: 0.01,
-  frictionAir: 0.00001,
-  restitution: 0.8,
-  url:"https://www.google.com",
-  isStatic:false,
-  render: {
-    fillStyle: '#3435ff',
-    strokeStyle: '#d3d3d3',
-    lineWidth: 3,
-    // sprite:{
-    //     texture: 'images/Ayla.jpg' 
-    //   },
-  }, 
-});
-
-var lgball1 = Matter.Bodies.circle(window.innerWidth/2, 35, 35, {
-  label: "ball",
-  density: 0.04,
-  friction: 0.01,
-  frictionAir: 0.00001,
-  restitution: 0.8,
-  url:"https://www.google.com",
-  isStatic:false,
-  render: {
-    fillStyle: '#3435ff',
-    strokeStyle: '#d3d3d3',
-    lineWidth: 3,
-  }, 
-});
-
-// var mdball1 = Matter.Bodies.circle(window.innerWidth/2, -1200, 42, {
-//   label: "ball",
-//   density: 0.04,
-//   friction: 0.01,
-//   frictionAir: 0.00001,
-//   restitution: 0.8,
-//   url:"https://www.google.com",
-//   isStatic:false,
-//   render: {
-//     fillStyle: 'transparent',
-//     strokeStyle: '#424248',
-//     lineWidth: 3,
-//   }, 
-// });
-
-// var mdball2 = Matter.Bodies.circle(window.innerWidth/2, -1200, 42, {
-//   label: "ball",
-//   density: 0.04,
-//   friction: 0.01,
-//   frictionAir: 0.00001,
-//   restitution: 0.8,
-//   url:"https://www.google.com",
-//   isStatic:false,
-//   render: {
-//     fillStyle: 'transparent',
-//     strokeStyle: '#424248',
-//     lineWidth: 3,
-//   }, 
-// });
-
-// var mdball3 = Matter.Bodies.circle(window.innerWidth/2, -1200, 42, {
-//   label: "ball",
-//   density: 0.04,
-//   friction: 0.01,
-//   frictionAir: 0.00001,
-//   restitution: 0.8,
-//   url:"https://www.google.com",
-//   isStatic:false,
-//   render: {
-//     fillStyle: 'transparent',
-//     strokeStyle: '#424248',
-//     lineWidth: 3,
-//   }, 
-// });
-
-// var mdball4 = Matter.Bodies.circle(window.innerWidth/2, -1200, 42, {
-//   label: "ball",
-//   density: 0.04,
-//   friction: 0.01,
-//   frictionAir: 0.00001,
-//   restitution: 0.8,
-//   url:"https://www.google.com",
-//   isStatic:false,
-//   render: {
-//     fillStyle: 'transparent',
-//     strokeStyle: '#424248',
-//     lineWidth: 3,
-//   }, 
-// });
-
-// var mdball5 = Matter.Bodies.circle(window.innerWidth/2, -1200, 42, {
-//   label: "ball",
-//   density: 0.04,
-//   friction: 0.01,
-//   frictionAir: 0.00001,
-//   restitution: 0.8,
-//   url:"https://www.google.com",
-//   isStatic:false,
-//   render: {
-//     fillStyle: 'transparent',
-//     strokeStyle: '#424248',
-//     lineWidth: 3,
-//   }, 
-// });
-
-// var mdball6 = Matter.Bodies.circle(window.innerWidth/2, -1200, 42, {
-//   label: "ball",
-//   density: 0.04,
-//   friction: 0.01,
-//   frictionAir: 0.00001,
-//   restitution: 0.8,
-//   url:"https://www.google.com",
-//   isStatic:false,
-//   render: {
-//     fillStyle: 'transparent',
-//     strokeStyle: '#424248',
-//     lineWidth: 3,
-//   }, 
-// });
-
-var lgball1 = Matter.Bodies.circle(window.innerWidth/2, 35, 35, {
-  label: "ball",
-  density: 0.04,
-  friction: 0.01,
-  frictionAir: 0.00001,
-  restitution: 0.8,
-  url:"https://www.google.com",
-  isStatic:false,
-  render: {
-    fillStyle: '#3435ff',
-    strokeStyle: '#d3d3d3',
-    lineWidth: 3,
+    myText: {
+      title: 'What I’m listening to',
+      fontSize: 15,
+      color: 'white',
+      fontFamily:'Open Sans, sans-serif',
+      fontWeight: 700,
+      isSplit: true,
+      offsetTop: 10,
+      lineHeight: 18,
+    }
   }, 
 });
 
 var lgball2 = Matter.Bodies.circle(window.innerWidth/2, 35, 35, {
-  label: "ball",
+  label: "ball2",
   density: 0.04,
   friction: 0.01,
   frictionAir: 0.00001,
@@ -272,7 +42,7 @@ var lgball2 = Matter.Bodies.circle(window.innerWidth/2, 35, 35, {
   //   strokeStyle: '#424248',
 
 var lgball3 = Matter.Bodies.circle(window.innerWidth/2, 35, 35, {
-  label: "ball",
+  label: "ball3",
   density: 0.04,
   friction: 0.01,
   frictionAir: 0.00001,
@@ -287,7 +57,7 @@ var lgball3 = Matter.Bodies.circle(window.innerWidth/2, 35, 35, {
 });
 
 var lgball4 = Matter.Bodies.circle(window.innerWidth/2, 35, 35, {
-  label: "ball",
+  label: "ball4",
   density: 0.04,
   friction: 0.01,
   frictionAir: 0.00001,
@@ -304,7 +74,7 @@ var lgball4 = Matter.Bodies.circle(window.innerWidth/2, 35, 35, {
 //squares
 
 var lgbox1 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
-  label: "block",
+  label: "block1",
   density: 0.04,
   friction: 1,
   frictionAir: 0.00001,
@@ -319,7 +89,7 @@ var lgbox1 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
 });
 
 var lgbox2 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
-  label: "block",
+  label: "block2",
   density: 0.04,
   friction: 1,
   frictionAir: 0.00001,
@@ -334,7 +104,7 @@ var lgbox2 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
 });
 
 var lgbox3 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
-  label: "block",
+  label: "block3",
   density: 0.04,
   friction: 1,
   frictionAir: 0.00001,
@@ -349,7 +119,7 @@ var lgbox3 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
 });
 
 var lgbox4 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
-  label: "block",
+  label: "block4",
   density: 0.04,
   friction: 1,
   frictionAir: 0.00001,
@@ -364,7 +134,7 @@ var lgbox4 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
 });
 
 var mdbox1 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
-  label: "block",
+  label: "block5",
   density: 0.04,
   friction: 1,
   frictionAir: 0.00001,
@@ -379,7 +149,7 @@ var mdbox1 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
 });
 
 var mdbox2 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
-  label: "block",
+  label: "block6",
   density: 0.04,
   friction: 1,
   frictionAir: 0.00001,
@@ -394,7 +164,7 @@ var mdbox2 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
 });
 
 var mdbox3 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
-  label: "block",
+  label: "block7",
   density: 0.04,
   friction: 1,
   frictionAir: 0.00001,
@@ -409,7 +179,7 @@ var mdbox3 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
 });
 
 var mdbox4 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
-  label: "block",
+  label: "block8",
   density: 0.04,
   friction: 1,
   frictionAir: 0.00001,
@@ -424,7 +194,7 @@ var mdbox4 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
 });
 
 var smbox1 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
-  label: "block",
+  label: "block9",
   density: 0.04,
   friction: 1,
   frictionAir: 0.00001,
@@ -439,7 +209,7 @@ var smbox1 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
 });
 
 var smbox2 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
-  label: "block",
+  label: "block10",
   density: 0.04,
   friction: 1,
   frictionAir: 0.00001,

@@ -84,6 +84,8 @@ p {
     padding-bottom: 40px;
     border-radius: 5px;
     box-shadow: 0px 0px 40px #7b7c85;
+    background-color: #40445e;
+    color: #fff;
 }
 .pop-up-content {
     height: 100%;
@@ -105,7 +107,7 @@ p {
     height: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
-.pop-up-content h1 {
+.pop-up-content h2 {
     line-height: 4.5;
     font-weight: 700;
     color: white;
@@ -120,6 +122,12 @@ p {
 .pop-up-content p a {
     color: #939ad2;
     font-weight: bold;
+}
+.big-link {
+    font-size: 24px;
+    text-align: center;
+    display: block;
+    margin-top: 70px;
 }
 .margin-top-100 {
     margin-top: 200px;
@@ -138,10 +146,7 @@ p {
     font-size: 22px;
     color: white;
 }
-#pop-up-me {
-    background-color: #40445e;
-    color: #fff;
-}
+
 .close-btn:hover {
     background-color: #d0d4ff;
 }
@@ -161,4 +166,41 @@ p {
     line-height: 50px;
     outline: none;
     cursor: pointer;
+}
+
+.pop-up iframe {
+    min-height: 315px;
+    /* height: calc((100vw - 20%) / 2);
+    max-height: 350px; */
+}
+
+.media {
+    margin: 50px auto 30px;
+}
+.images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.images img {
+    width: 33%;
+    transition: 1s;
+}
+.images img:nth-of-type(2):hover {
+    transform: scale(2);
+    transition: 1s;
+    transform-origin: center;
+    z-index: 1;
+}
+.images img:first-of-type:hover {
+    transform-origin: -50%;
+    transform: scale(2);
+    transition: 1s;
+    z-index: 1;
+}
+.images img:last-of-type:hover {
+    transform-origin: 150%;
+    transform: scale(2);
+    transition: 1s;
+    z-index: 1;
 }

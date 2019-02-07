@@ -66,9 +66,9 @@ var walls = [
 
 
 window.addEventListener("resize", testFunc);
-Matter.World.add(world, linkBodies);
-Matter.World.add(world, fillers);
-Matter.World.add(world, [walls[1], walls[2], walls[3]
+  Matter.World.add(world, linkBodies);
+  Matter.World.add(world, fillers);
+  Matter.World.add(world, [walls[1], walls[2], walls[3]
 ]);
 
 
@@ -134,8 +134,33 @@ Matter.Events.on(mConstraint, 'mousedown', function (event) {
       console.log(a)
       // For popup content
       if(a.label === 'me') {
-        document.getElementById('pop-up-me').style.display = 'block';
-        document.getElementById('pop-up-me').className += ' animated bounceInUp';
+        document.getElementById('me').style.display = 'block';
+        document.getElementById('me').className += ' animated bounceInUp';
+        mConstraint.body = null;
+      }
+      if(a.label === 'recent1') {
+        document.getElementById('recent1').style.display = 'block';
+        document.getElementById('recent1').className += ' animated bounceInUp';
+        mConstraint.body = null;
+      }
+      if(a.label === 'recent2') {
+        document.getElementById('recent2').style.display = 'block';
+        document.getElementById('recent2').className += ' animated bounceInUp';
+        mConstraint.body = null;
+      }
+      if(a.label === 'recent3') {
+        document.getElementById('recent3').style.display = 'block';
+        document.getElementById('recent3').className += ' animated bounceInUp';
+        mConstraint.body = null;
+      }
+      if(a.label === 'listen') {
+        document.getElementById('listen').style.display = 'block';
+        document.getElementById('listen').className += ' animated bounceInUp';
+        mConstraint.body = null;
+      }
+      if(a.label === 'testimonials') {
+        document.getElementById('testimonials').style.display = 'block';
+        document.getElementById('testimonials').className += ' animated bounceInUp';
         mConstraint.body = null;
       }
     }

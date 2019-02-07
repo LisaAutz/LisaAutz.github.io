@@ -3,14 +3,14 @@
 /*
    ====== BIO popup actions ======
 */
-var closeButton = document.getElementById('close');
-var popUpMe = document.getElementById('pop-up-me');
 
-closeButton.addEventListener('click', function() {
-    popUpMe.className = 'pop-up animated bounceOutDown';
+function closePopUp(parent) {
+    var parentElId =parent.dataset.target;
+    var parent = document.getElementById(parentElId);
+
+    parent.className = 'pop-up animated bounceOutDown';
     setTimeout(function() {
-        popUpMe.className = 'pop-up';
-        popUpMe.style.display = 'none';
+        parent.className = 'pop-up';
+        parent.style.display = 'none';
     }, 1000)
-
-});
+}
