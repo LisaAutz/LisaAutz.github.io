@@ -1,4 +1,3 @@
-
 var myCanvas = document.getElementById('c');
 var ctx = myCanvas.getContext("2d");
 var flip = document.getElementById('flip');
@@ -66,10 +65,9 @@ var walls = [
 
 
 window.addEventListener("resize", testFunc);
-  Matter.World.add(world, linkBodies);
-  Matter.World.add(world, fillers);
-  Matter.World.add(world, [walls[1], walls[2], walls[3]
-]);
+Matter.World.add(world, linkBodies);
+Matter.World.add(world, fillers);
+Matter.World.add(world, [walls[1], walls[2], walls[3]]);
 
 
 setTimeout(function () { Matter.World.add(world, walls[0]); }, 4000);
@@ -79,9 +77,8 @@ Matter.Render.run(render);
 function testFunc() {
   Matter.Body.setPosition(walls[2], { x: window.innerWidth, y: window.innerHeight / 2 });
   Matter.Body.setPosition(walls[1], { x: window.innerWidth / 2, y: window.innerHeight });
-
-
 };
+
 var canvasmouse = Mouse.create(myCanvas);
 var options = {
   body: null,
@@ -166,4 +163,3 @@ Matter.Events.on(mConstraint, 'mousedown', function (event) {
     }
   }
 });
-
