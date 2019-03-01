@@ -18,6 +18,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=9big5kymg8sqsd137w6i6asb9cy5hzmra5frfwufdpjy3jxc"></script>
+
     <!-- Firebase files -->
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
     <script>
@@ -31,6 +33,8 @@
             messagingSenderId: "324698111470"
         };
         firebase.initializeApp(config);
+        var db = firebase.firestore();
+      
         var uid = null;
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
@@ -44,13 +48,6 @@
                 document.getElementById('form').style.display = 'flex'
             }
         });
-        // var currentUser = firebase.auth().currentUser;
-        // console.log(currentUser)
-        // firebase.auth().signOut().then(function () {
-
-        // }).catch(function (error) {
-
-        // });
     </script>
 </head>
 
@@ -97,6 +94,10 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
+            <form id="tinymce">
+                <textarea name="message" id="tinymce-value" cols="30" rows="10"></textarea>
+                <button>Save</button>
+            </form>
         </div>
         
     </section>
@@ -104,25 +105,57 @@
     <script>
         var form = document.getElementById('form');
         var messages = document.getElementById('messages');
-       
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-            var email = form['email'].value;
-            var password = form['password'].value;
-            firebase.auth()
-                .signInWithEmailAndPassword(email, password)
-                .then(data => {
-                    // success message
-                   messages.className += ' alert-success d-block'
-                })
-                .catch(function(error) {
-                    console.log(error.message)
-                     // success message
-                    messages.className += ' alert-danger d-block'
-                    document.getElementById('msg-content').innerHTML = '<strong>Login Failed!</strong> '+error.message; 
+        // ##############################################################################
+        // **************************  FIREBASE LOGIN LOGIC  ***************************
+        // ##############################################################################
+                // Sign in process
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    var email = form['email'].value;
+                    var password = form['password'].value;
+                    firebase.auth()
+                        .signInWithEmailAndPassword(email, password)
+                        .then(data => {
+                            // success message
+                        messages.className += ' alert-success d-block'
+                        })
+                        .catch(function(error) {
+                            console.log(error.message)
+                            // success message
+                            messages.className += ' alert-danger d-block'
+                            document.getElementById('msg-content').innerHTML = '<strong>Login Failed!</strong> '+error.message; 
+                        });
                 });
 
+                // Sign Out the user
+                document.getElementById('sign-out').addEventListener('click', function(event) {
+                    event.preventDefault();
+                    firebase.auth().signOut().then(function () {
+                        console.log('User Signed out');
+                        document.getElementById('sign-out').style.display = 'inline-block';
+                        document.getElementById('form').style.display = 'none'
+                    }).catch(function (error) {
+
+                    });
+                });
+
+         // ##############################################################################
+        // **************************  FIRESTORE LOGIC  ***************************
+        // ##############################################################################
+        db.collection("posts").get().then(function(querySnapshot) {
+            querySnapshot.forEach(function(doc) {
+                console.log(doc.id, " => ", doc.data());
+            });
         });
+        // Start TinyMCE
+        tinymce.init({
+            selector: 'textarea'
+        });
+
+        document.getElementById('tinymce').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var data = tinymce.get('tinymce-value').getContent();
+        })
     </script>
 </body>
 
