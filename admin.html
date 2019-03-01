@@ -94,9 +94,9 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form id="tinymce">
-                <textarea name="message" id="tinymce-value" cols="30" rows="10"></textarea>
-                <button>Save</button>
+            <form id="me">
+                <textarea name="message" id="me-value" cols="30" rows="10"></textarea>
+                <button data-parent="me" data-value="me-value" onclick="saveContent(this)">Save</button>
             </form>
         </div>
         
@@ -142,20 +142,42 @@
          // ##############################################################################
         // **************************  FIRESTORE LOGIC  ***************************
         // ##############################################################################
-        db.collection("posts").get().then(function(querySnapshot) {
-            querySnapshot.forEach(function(doc) {
-                console.log(doc.id, " => ", doc.data());
+            db.collection("posts").get().then(function(querySnapshot) {
+                querySnapshot.forEach(function(doc) {
+                    console.log(doc.id, " => ", doc.data());
+                });
             });
-        });
-        // Start TinyMCE
-        tinymce.init({
-            selector: 'textarea'
-        });
 
-        document.getElementById('tinymce').addEventListener('submit', function(event) {
-            event.preventDefault();
-            var data = tinymce.get('tinymce-value').getContent();
-        })
+        
+        
+        
+        // ##############################################################################
+        // **************************  FIRESTORE LOGIC  ***************************
+        // ##############################################################################
+            // Start TinyMCE
+            tinymce.init({
+                selector: 'textarea'
+            });
+
+            function saveContent(element) {
+                document.getElementById(element.dataset.parent).addEventListener('submit', function(event) {
+                     event.preventDefault();
+                    var data = tinymce.get(element.dataset.value).getContent();
+                    db.collection("posts").doc(element.dataset.parent).set({
+                        content: data,
+                        updatedAt: Date.now()
+                    })
+                    .then(function() {
+                        messages.className += ' alert-success d-block';
+                        document.getElementById('msg-content').innerHTML = '<strong>Changes have been saved successfully</strong>';
+                    })
+                    .catch(function(error) {
+                        messages.className += ' alert-danger d-block'
+                        document.getElementById('msg-content').innerHTML = '<strong>Changes Failed!</strong> '+error.message; 
+                    });
+                })
+            }
+            
     </script>
 </body>
 
