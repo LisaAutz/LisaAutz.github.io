@@ -31,36 +31,31 @@
             messagingSenderId: "324698111470"
         };
         firebase.initializeApp(config);
-        // firebase.auth().signInWithEmailAndPassword('admin@example.com', 'password').catch(function(error) {
-        //     // Handle Errors here.
-        //     var errorCode = error.code;
-        //     var errorMessage = error.message;
-        //     // ...
-        // });
+        var uid = null;
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
-                // User is signed in.
-                var displayName = user.displayName;
-                var email = user.email;
-                var emailVerified = user.emailVerified;
-                var photoURL = user.photoURL;
-                var isAnonymous = user.isAnonymous;
-                var uid = user.uid;
-                var providerData = user.providerData;
+                uid = user.uid;
                 console.log(user)
+                document.getElementById('sign-out').style.display = 'inline-block';
+                document.getElementById('form').style.display = 'none'
             } else {
                 console.log('user not', user)
+                document.getElementById('sign-out').style.display = 'none';
+                document.getElementById('form').style.display = 'flex'
             }
         });
-        firebase.auth().signOut().then(function () {
+        // var currentUser = firebase.auth().currentUser;
+        // console.log(currentUser)
+        // firebase.auth().signOut().then(function () {
 
-        }).catch(function (error) {
+        // }).catch(function (error) {
 
-        });
+        // });
     </script>
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
         <div class="container">
             <a class="navbar-brand" href="#">I'm Admin</a>
@@ -76,25 +71,59 @@
                     <li class="nav-item"><a href="#" class="nav-link">More</a></li>
                 </ul>
                 <div class="nav navbar-nav flex-row justify-content-between ml-auto">
-
-
-                    <form class="form form-inline" role="form">
+                    <form class="form form-inline" role="form" id="form">
                         <div class="form-group">
                             <input id="emailInput" placeholder="Email" class="form-control form-control-sm" type="text"
-                                required="">
+                                required="" name="email">
                         </div>
                         <div class="form-group ml-2">
-                            <input id="passwordInput" placeholder="Password" class="form-control form-control-sm"
-                                type="text" required="">
+                            <input id="passwordInput" name="password" placeholder="Password" class="form-control form-control-sm"
+                                type="password" required="">
                         </div>
                         <div class="form-group ml-2">
                             <input type="submit" class="btn btn-primary btn-sm">
                         </div>
                     </form>
+                    <button class="btn btn-sm btn-danger" style="display:none" id="sign-out">Sign Out</button>
                 </div>
             </div>
         </div>
     </nav>
+    <section class="pt-5">
+        <div class="container">
+            <div class="alert alert-dismissible fade show mt-5 d-none" role="alert" id="messages">
+                <div id="msg-content"><strong>Login Success!</strong> You have been successfully loged in.</div>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+        
+    </section>
+    
+    <script>
+        var form = document.getElementById('form');
+        var messages = document.getElementById('messages');
+       
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            var email = form['email'].value;
+            var password = form['password'].value;
+            firebase.auth()
+                .signInWithEmailAndPassword(email, password)
+                .then(data => {
+                    // success message
+                   messages.className += ' alert-success d-block'
+                })
+                .catch(function(error) {
+                    console.log(error.message)
+                     // success message
+                    messages.className += ' alert-danger d-block'
+                    document.getElementById('msg-content').innerHTML = '<strong>Login Failed!</strong> '+error.message; 
+                });
+
+        });
+    </script>
 </body>
 
 </html>
