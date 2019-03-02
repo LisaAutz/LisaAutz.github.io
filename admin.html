@@ -54,12 +54,13 @@
                 document.getElementById('form').style.display = 'flex'
             }
         });
-        
+
     </script>
-   
+
     <link rel="stylesheet" href="css/style.css">
     <style>
-        html, body {
+        html,
+        body {
             overflow: auto;
             background-color: #ffffff;
         }
@@ -67,36 +68,25 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
+    <nav class="navbar navbar-dark bg-dark fixed-top" role="navigation">
         <div class="container">
-            <a class="navbar-brand" href="#">I'm Admin</a>
-            <button class="navbar-toggler border-0" type="button" data-toggle="collapse"
-                data-target="#exCollapsingNavbar">
-                &#9776;
-            </button>
-            <div class="collapse navbar-collapse" id="exCollapsingNavbar">
-                <ul class="nav navbar-nav">
-                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Service</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">More</a></li>
-                </ul>
-                <div class="nav navbar-nav flex-row justify-content-between ml-auto">
-                    <form class="form form-inline" role="form" id="form">
-                        <div class="form-group">
-                            <input id="emailInput" placeholder="Email" class="form-control form-control-sm" type="text"
-                                required="" name="email">
-                        </div>
-                        <div class="form-group ml-2">
-                            <input id="passwordInput" name="password" placeholder="Password" class="form-control form-control-sm"
-                                type="password" required="">
-                        </div>
-                        <div class="form-group ml-2">
-                            <input type="submit" class="btn btn-primary btn-sm">
-                        </div>
-                    </form>
-                    <button class="btn btn-sm btn-danger" style="display:none" id="sign-out">Sign Out</button>
-                </div>
+            <a class="navbar-brand" href="/">I'm Admin</a>
+            <a href="/" class="nav-link">HOME</a>
+            <div class="nav navbar-nav flex-row justify-content-between ml-auto">
+                <form class="form form-inline" role="form" id="form">
+                    <div class="form-group">
+                        <input id="emailInput" placeholder="Email" class="form-control form-control-sm" type="text"
+                            required="" name="email">
+                    </div>
+                    <div class="form-group ml-2">
+                        <input id="passwordInput" name="password" placeholder="Password"
+                            class="form-control form-control-sm" type="password" required="">
+                    </div>
+                    <div class="form-group ml-2">
+                        <input type="submit" class="btn btn-primary btn-sm">
+                    </div>
+                </form>
+                <button class="btn btn-sm btn-danger" style="display:none" id="sign-out">Sign Out</button>
             </div>
         </div>
     </nav>
@@ -109,11 +99,11 @@
                 </button>
             </div>
             <div class="alert alert-danger alert-dismissible fade show mt-5" role="alert" id="public">
-                    <div id="msg-content"> You need sign in to edit your posts.</div>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+                <div id="msg-content"> You need sign in to edit your posts.</div>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
             <!-- Placeholder for posts navlinks -->
             <div id="private" style="display:none">
                 <nav id="post-nav">
@@ -125,102 +115,102 @@
             </div>
         </div>
     </section>
-   
-    
+
+
     <script>
         var form = document.getElementById('form');
         var messages = document.getElementById('messages');
         // ##############################################################################
         // **************************  FIREBASE LOGIN LOGIC  ***************************
         // ##############################################################################
-                // Sign in process
-                form.addEventListener('submit', function(event) {
-                    event.preventDefault();
-                    var email = form['email'].value;
-                    var password = form['password'].value;
-                    firebase.auth()
-                        .signInWithEmailAndPassword(email, password)
-                        .then(data => {
-                            // success message
-                            messages.className += ' alert-success d-block';
-                            location.reload()
-                        })
-                        .catch(function(error) {
-                            console.log(error.message)
-                            // success message
-                            messages.className += ' alert-danger d-block'
-                            document.getElementById('msg-content').innerHTML = '<strong>Login Failed!</strong> '+error.message; 
-                        });
+        // Sign in process
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            var email = form['email'].value;
+            var password = form['password'].value;
+            firebase.auth()
+                .signInWithEmailAndPassword(email, password)
+                .then(data => {
+                    // success message
+                    messages.className += ' alert-success d-block';
+                    location.reload()
+                })
+                .catch(function (error) {
+                    console.log(error.message)
+                    // success message
+                    messages.className += ' alert-danger d-block'
+                    document.getElementById('msg-content').innerHTML = '<strong>Login Failed!</strong> ' + error.message;
                 });
+        });
 
-                // Sign Out the user
-                document.getElementById('sign-out').addEventListener('click', function(event) {
-                    event.preventDefault();
-                    firebase.auth().signOut().then(function () {
-                        console.log('User Signed out');
-                        document.getElementById('sign-out').style.display = 'inline-block';
-                        document.getElementById('form').style.display = 'none';
-                        location.reload()
-                    }).catch(function (error) {
+        // Sign Out the user
+        document.getElementById('sign-out').addEventListener('click', function (event) {
+            event.preventDefault();
+            firebase.auth().signOut().then(function () {
+                console.log('User Signed out');
+                document.getElementById('sign-out').style.display = 'inline-block';
+                document.getElementById('form').style.display = 'none';
+                location.reload()
+            }).catch(function (error) {
 
-                    });
-                });
+            });
+        });
 
-         // ##############################################################################
+        // ##############################################################################
         // **************************  FIRESTORE LOGIC  ***************************
         // ##############################################################################
-            
-            db.collection("posts").get().then(function(querySnapshot) {
-                var data = querySnapshot.docs;
-                data.forEach(function(item, i) {
-                    console.log(i)
-                    var navBar =  document.getElementById('myTab');
-                   navBar.innerHTML +=(`
-                         <a class="nav-link ${i == 0?'active':null}" id=${item.id+'-tab'} data-toggle="tab" href="#${item.id+'-tab-content'}" role="tab" aria-controls="home" aria-selected="true">${item.id}</a>
+
+        db.collection("posts").get().then(function (querySnapshot) {
+            var data = querySnapshot.docs;
+            data.forEach(function (item, i) {
+                console.log(i)
+                var navBar = document.getElementById('myTab');
+                navBar.innerHTML += (`
+                         <a class="nav-link ${i == 0 ? 'active' : null}" id=${item.id + '-tab'} data-toggle="tab" href="#${item.id + '-tab-content'}" role="tab" aria-controls="home" aria-selected="true">${item.id}</a>
                     `)
-                    document.getElementById('myTabContent').innerHTML +=
-                    `<div class="tab-pane fade ${i == 0?'show active':null}" id=${item.id+'-tab-content'} role="tabpanel" aria-labelledby=${item.id+"-tab"}>
-                        <h3 style="text-transform: capitalize">Edit "${item.id.replace(/-/gi,' ')}"</h3>
+                document.getElementById('myTabContent').innerHTML +=
+                    `<div class="tab-pane fade ${i == 0 ? 'show active' : null}" id=${item.id + '-tab-content'} role="tabpanel" aria-labelledby=${item.id + "-tab"}>
+                        <h3 style="text-transform: capitalize">Edit "${item.id.replace(/-/gi, ' ')}"</h3>
                         <form id=${item.id}>
-                            <textarea id=${item.id+'-value'}>${item.data().content}</textarea>
-                            <button class="btn btn-primary mt-3" data-parent=${item.id} data-value=${item.id+'-value'} onclick="saveContent(this)">Save</button>
+                            <textarea id=${item.id + '-value'}>${item.data().content}</textarea>
+                            <button class="btn btn-primary mt-3" data-parent=${item.id} data-value=${item.id + '-value'} onclick="saveContent(this)">Save</button>
                         </form>
                     </div>`
-                });
-                // Start TinyMCE onec all data are added to the DOM
-                tinymce.init({
-                    selector: 'textarea',
-                    height: 400,
-                    pagebreak_split_block: true,
-                    toolbar: "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | table | fontsizeselect",
-                    plugins: [
+            });
+            // Start TinyMCE onec all data are added to the DOM
+            tinymce.init({
+                selector: 'textarea',
+                height: 400,
+                pagebreak_split_block: true,
+                toolbar: "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | table | fontsizeselect",
+                plugins: [
                     "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
                     "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
                     "save table contextmenu directionality emoticons template paste textcolor"],
-                    // content_css : "/css/style.css", 
-                });
+                // content_css : "/css/style.css", 
             });
+        });
 
-            function saveContent(element) {
-                document.getElementById(element.dataset.parent).addEventListener('submit', function(event) {
-                     event.preventDefault();
-                    var data = tinymce.get(element.dataset.value).getContent();
-                    db.collection("posts").doc(element.dataset.parent).set({
-                        content: data,
-                        updatedAt: Date.now()
-                    })
-                    .then(function() {
+        function saveContent(element) {
+            document.getElementById(element.dataset.parent).addEventListener('submit', function (event) {
+                event.preventDefault();
+                var data = tinymce.get(element.dataset.value).getContent();
+                db.collection("posts").doc(element.dataset.parent).set({
+                    content: data,
+                    updatedAt: Date.now()
+                })
+                    .then(function () {
                         messages.className += ' alert-success d-block';
                         document.getElementById('msg-content').innerHTML = '<strong>Changes have been saved successfully</strong>';
                     })
-                    .catch(function(error) {
+                    .catch(function (error) {
                         messages.className += ' alert-danger d-block'
-                        document.getElementById('msg-content').innerHTML = '<strong>Changes Failed!</strong> '+error.message; 
+                        document.getElementById('msg-content').innerHTML = '<strong>Changes Failed!</strong> ' + error.message;
                     });
-                })
-            }
-            
-            
+            })
+        }
+
+
     </script>
 </body>
 
