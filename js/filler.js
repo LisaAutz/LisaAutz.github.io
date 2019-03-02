@@ -1,5 +1,5 @@
 var lgball1 = Matter.Bodies.circle(window.innerWidth/2, 55, 55, {
-  label: "listen",
+  label: "music",
   density: 0.04,
   friction: 1,
   frictionAir: 0.025,

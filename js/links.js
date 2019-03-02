@@ -49,7 +49,7 @@ var blink2 = Matter.Bodies.rectangle(window.innerWidth/2, 75, 75, 75, {
 });
 
 var blink3 = Matter.Bodies.rectangle(window.innerWidth/3, 95, 95, 95, {
-  label: "recent3",
+  label: "iam-2018",
   density: 0.04,
   friction: 1,
   frictionAir: 0.020,
@@ -372,7 +372,7 @@ var blink18 = Matter.Bodies.rectangle(window.innerWidth/ 5, 40, 40, 40, {
   });
 
 var blink19 = Matter.Bodies.circle(window.innerWidth/ 5, 55, 55, {
-    label: "recent1",
+    label: "everyone-in",
     density: 0.04,
     friction: 1,
     frictionAir: 0.025,
@@ -396,7 +396,7 @@ var blink19 = Matter.Bodies.circle(window.innerWidth/ 5, 55, 55, {
   });
 
   var blink20 = Matter.Bodies.circle(window.innerWidth/ 2, 55, 55, {
-    label: "recent2",
+    label: "safe-clean-water",
     density: 0.04,
     friction: 1,
     frictionAir: 0.025,

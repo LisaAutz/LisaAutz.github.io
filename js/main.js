@@ -135,24 +135,24 @@ Matter.Events.on(mConstraint, 'mousedown', function (event) {
         document.getElementById('me').className += ' animated bounceInUp';
         mConstraint.body = null;
       }
-      if(a.label === 'recent1') {
-        document.getElementById('recent1').style.display = 'block';
-        document.getElementById('recent1').className += ' animated bounceInUp';
+      if(a.label === 'everyone-in') {
+        document.getElementById('everyone-in').style.display = 'block';
+        document.getElementById('everyone-in').className += ' animated bounceInUp';
         mConstraint.body = null;
       }
-      if(a.label === 'recent2') {
-        document.getElementById('recent2').style.display = 'block';
-        document.getElementById('recent2').className += ' animated bounceInUp';
+      if(a.label === 'safe-clean-water') {
+        document.getElementById('safe-clean-water').style.display = 'block';
+        document.getElementById('safe-clean-water').className += ' animated bounceInUp';
         mConstraint.body = null;
       }
-      if(a.label === 'recent3') {
-        document.getElementById('recent3').style.display = 'block';
-        document.getElementById('recent3').className += ' animated bounceInUp';
+      if(a.label === 'iam-2018') {
+        document.getElementById('iam-2018').style.display = 'block';
+        document.getElementById('iam-2018').className += ' animated bounceInUp';
         mConstraint.body = null;
       }
-      if(a.label === 'listen') {
-        document.getElementById('listen').style.display = 'block';
-        document.getElementById('listen').className += ' animated bounceInUp';
+      if(a.label === 'music') {
+        document.getElementById('music').style.display = 'block';
+        document.getElementById('music').className += ' animated bounceInUp';
         mConstraint.body = null;
       }
       if(a.label === 'testimonials') {
