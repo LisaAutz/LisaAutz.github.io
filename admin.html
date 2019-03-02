@@ -23,6 +23,7 @@
     <!-- Firebase files -->
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
     <script>
+
         // Initialize Firebase
         var config = {
             apiKey: "AIzaSyAxbkzW-8wp2qPK02mfJPNFy9dHaMagR4k",
@@ -34,7 +35,9 @@
         };
         firebase.initializeApp(config);
         var db = firebase.firestore();
-      
+        db.collection('posts').get().then((data) => {
+            console.log(data.docs)
+        })
         var uid = null;
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
@@ -48,6 +51,7 @@
                 document.getElementById('form').style.display = 'flex'
             }
         });
+        
     </script>
 </head>
 
@@ -94,13 +98,16 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form id="me">
-                <textarea name="message" id="me-value" cols="30" rows="10"></textarea>
+            
+            <!-- <form id="me">
+                <textarea name="message" id="me-value2" cols="30" rows="10"></textarea>
                 <button data-parent="me" data-value="me-value" onclick="saveContent(this)">Save</button>
-            </form>
+            </form> -->
+            <div id="result"></div>
         </div>
         
     </section>
+   
     
     <script>
         var form = document.getElementById('form');
@@ -142,21 +149,19 @@
          // ##############################################################################
         // **************************  FIRESTORE LOGIC  ***************************
         // ##############################################################################
+            
             db.collection("posts").get().then(function(querySnapshot) {
-                querySnapshot.forEach(function(doc) {
-                    console.log(doc.id, " => ", doc.data());
+                var data = querySnapshot.docs;
+                data.forEach(function(item) {
+                    document.getElementById('result').innerHTML +=`<textarea id=${item.id}>${item.data().content}</textarea>`
+                })
+                tinymce.init({
+                    selector: 'textarea',
                 });
-            });
-
-        
-        
-        
-        // ##############################################################################
-        // **************************  FIRESTORE LOGIC  ***************************
-        // ##############################################################################
-            // Start TinyMCE
-            tinymce.init({
-                selector: 'textarea'
+                // querySnapshot.docs.forEach(function(doc) {
+                //     console.log(doc.id)
+                //     // tinymce.get(doc.id+'-value').setContent(doc.data().content);
+                // });
             });
 
             function saveContent(element) {
@@ -177,6 +182,15 @@
                     });
                 })
             }
+        
+        
+        // ##############################################################################
+        // **************************  Start TinyMCE  ***************************
+        // ##############################################################################
+           
+          
+        
+            
             
     </script>
 </body>
