@@ -50,7 +50,7 @@ var blink2 = Matter.Bodies.rectangle(window.innerWidth/2, 75, 75, 75, {
 
 var blink3 = Matter.Bodies.rectangle(window.innerWidth/3, 95, 95, 95, {
   label: "iam-2018",
-  density: 0.04,
+  density: 0.01,
   friction: 1,
   frictionAir: 0.020,
   restitution: 0.1,

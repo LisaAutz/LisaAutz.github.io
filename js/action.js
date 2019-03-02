@@ -14,6 +14,8 @@ function closePopUp(parent) {
         parent.style.display = 'none';
     }, 1000)
 }
+
+// For Loading Posts data from Firestore
 var config = {
     apiKey: "AIzaSyAxbkzW-8wp2qPK02mfJPNFy9dHaMagR4k",
     authDomain: "adamwritesthings-343c9.firebaseapp.com",
@@ -23,8 +25,9 @@ var config = {
     messagingSenderId: "324698111470"
 };
 firebase.initializeApp(config);
+// Initialize database
 var db = firebase.firestore();
-console.log(db)
+// Get all posts from posts array
 db.collection('posts').get().then(function(data) {
     data.docs.forEach(function(item) {
         document.getElementById('myposts').innerHTML += `

@@ -235,6 +235,20 @@ p {
 #post-nav a {
     color: #fff;
 }
+#spinner {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 9999;
+}
 @media (max-width: 768px) {
     .pop-up {
         width: 94%;

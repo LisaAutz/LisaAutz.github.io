@@ -1,3 +1,4 @@
+
 var myCanvas = document.getElementById('c');
 var ctx = myCanvas.getContext("2d");
 var flip = document.getElementById('flip');
@@ -65,9 +66,10 @@ var walls = [
 
 
 window.addEventListener("resize", testFunc);
-Matter.World.add(world, linkBodies);
-Matter.World.add(world, fillers);
-Matter.World.add(world, [walls[1], walls[2], walls[3]]);
+  Matter.World.add(world, linkBodies);
+  Matter.World.add(world, fillers);
+  Matter.World.add(world, [walls[1], walls[2], walls[3]
+]);
 
 
 setTimeout(function () { Matter.World.add(world, walls[0]); }, 4000);
@@ -77,8 +79,9 @@ Matter.Render.run(render);
 function testFunc() {
   Matter.Body.setPosition(walls[2], { x: window.innerWidth, y: window.innerHeight / 2 });
   Matter.Body.setPosition(walls[1], { x: window.innerWidth / 2, y: window.innerHeight });
-};
 
+
+};
 var canvasmouse = Mouse.create(myCanvas);
 var options = {
   body: null,
@@ -132,32 +135,32 @@ Matter.Events.on(mConstraint, 'mousedown', function (event) {
       // For popup content
       if(a.label === 'me') {
         document.getElementById('me').style.display = 'block';
-        document.getElementById('me').className += ' animated bounceInUp';
+        document.getElementById('me').className += ' animated fadeIn';
         mConstraint.body = null;
       }
       if(a.label === 'everyone-in') {
         document.getElementById('everyone-in').style.display = 'block';
-        document.getElementById('everyone-in').className += ' animated bounceInUp';
+        document.getElementById('everyone-in').className += ' animated fadeIn';
         mConstraint.body = null;
       }
       if(a.label === 'safe-clean-water') {
         document.getElementById('safe-clean-water').style.display = 'block';
-        document.getElementById('safe-clean-water').className += ' animated bounceInUp';
+        document.getElementById('safe-clean-water').className += ' animated fadeIn';
         mConstraint.body = null;
       }
       if(a.label === 'iam-2018') {
         document.getElementById('iam-2018').style.display = 'block';
-        document.getElementById('iam-2018').className += ' animated bounceInUp';
+        document.getElementById('iam-2018').className += ' animated fadeIn';
         mConstraint.body = null;
       }
       if(a.label === 'music') {
         document.getElementById('music').style.display = 'block';
-        document.getElementById('music').className += ' animated bounceInUp';
+        document.getElementById('music').className += ' animated fadeIn';
         mConstraint.body = null;
       }
       if(a.label === 'testimonials') {
         document.getElementById('testimonials').style.display = 'block';
-        document.getElementById('testimonials').className += ' animated bounceInUp';
+        document.getElementById('testimonials').className += ' animated fadeIn';
         mConstraint.body = null;
       }
     }

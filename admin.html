@@ -19,44 +19,11 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <!-- <script src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=9big5kymg8sqsd137w6i6asb9cy5hzmra5frfwufdpjy3jxc"></script> -->
-    <script src="//tinymce.cachefly.net/4.2/tinymce.min.js"></script>
+    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
 
     <!-- Firebase files -->
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
-    <script>
-
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyAxbkzW-8wp2qPK02mfJPNFy9dHaMagR4k",
-            authDomain: "adamwritesthings-343c9.firebaseapp.com",
-            databaseURL: "https://adamwritesthings-343c9.firebaseio.com",
-            projectId: "adamwritesthings-343c9",
-            storageBucket: "",
-            messagingSenderId: "324698111470"
-        };
-        firebase.initializeApp(config);
-        var db = firebase.firestore();
-        db.collection('posts').get().then((data) => {
-            console.log(data.docs)
-        })
-        var uid = null;
-        firebase.auth().onAuthStateChanged(function (user) {
-            if (user) {
-                uid = user.uid;
-                console.log(user)
-                document.getElementById('private').style.display = 'block';
-                document.getElementById('public').style.display = 'none';
-                document.getElementById('sign-out').style.display = 'inline-block';
-                document.getElementById('form').style.display = 'none'
-            } else {
-                console.log('user not', user)
-                document.getElementById('sign-out').style.display = 'none';
-                document.getElementById('form').style.display = 'flex'
-            }
-        });
-
-    </script>
-
+    
     <link rel="stylesheet" href="css/style.css">
     <style>
         html,
@@ -98,7 +65,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="alert alert-danger alert-dismissible fade show mt-5" role="alert" id="public">
+            <div class="alert alert-dismissible fade show mt-5" role="alert" id="public" style="display:none">
                 <div id="msg-content"> You need sign in to edit your posts.</div>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -115,103 +82,12 @@
             </div>
         </div>
     </section>
-
-
-    <script>
-        var form = document.getElementById('form');
-        var messages = document.getElementById('messages');
-        // ##############################################################################
-        // **************************  FIREBASE LOGIN LOGIC  ***************************
-        // ##############################################################################
-        // Sign in process
-        form.addEventListener('submit', function (event) {
-            event.preventDefault();
-            var email = form['email'].value;
-            var password = form['password'].value;
-            firebase.auth()
-                .signInWithEmailAndPassword(email, password)
-                .then(data => {
-                    // success message
-                    messages.className += ' alert-success d-block';
-                    location.reload()
-                })
-                .catch(function (error) {
-                    console.log(error.message)
-                    // success message
-                    messages.className += ' alert-danger d-block'
-                    document.getElementById('msg-content').innerHTML = '<strong>Login Failed!</strong> ' + error.message;
-                });
-        });
-
-        // Sign Out the user
-        document.getElementById('sign-out').addEventListener('click', function (event) {
-            event.preventDefault();
-            firebase.auth().signOut().then(function () {
-                console.log('User Signed out');
-                document.getElementById('sign-out').style.display = 'inline-block';
-                document.getElementById('form').style.display = 'none';
-                location.reload()
-            }).catch(function (error) {
-
-            });
-        });
-
-        // ##############################################################################
-        // **************************  FIRESTORE LOGIC  ***************************
-        // ##############################################################################
-
-        db.collection("posts").get().then(function (querySnapshot) {
-            var data = querySnapshot.docs;
-            data.forEach(function (item, i) {
-                console.log(i)
-                var navBar = document.getElementById('myTab');
-                navBar.innerHTML += (`
-                         <a class="nav-link ${i == 0 ? 'active' : null}" id=${item.id + '-tab'} data-toggle="tab" href="#${item.id + '-tab-content'}" role="tab" aria-controls="home" aria-selected="true">${item.id}</a>
-                    `)
-                document.getElementById('myTabContent').innerHTML +=
-                    `<div class="tab-pane fade ${i == 0 ? 'show active' : null}" id=${item.id + '-tab-content'} role="tabpanel" aria-labelledby=${item.id + "-tab"}>
-                        <h3 style="text-transform: capitalize">Edit "${item.id.replace(/-/gi, ' ')}"</h3>
-                        <form id=${item.id}>
-                            <textarea id=${item.id + '-value'}>${item.data().content}</textarea>
-                            <button class="btn btn-primary mt-3" data-parent=${item.id} data-value=${item.id + '-value'} onclick="saveContent(this)">Save</button>
-                        </form>
-                    </div>`
-            });
-            // Start TinyMCE onec all data are added to the DOM
-            tinymce.init({
-                selector: 'textarea',
-                height: 400,
-                pagebreak_split_block: true,
-                toolbar: "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | table | fontsizeselect",
-                plugins: [
-                    "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
-                    "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
-                    "save table contextmenu directionality emoticons template paste textcolor"],
-                // content_css : "/css/style.css", 
-            });
-        });
-
-        function saveContent(element) {
-            document.getElementById(element.dataset.parent).addEventListener('submit', function (event) {
-                event.preventDefault();
-                var data = tinymce.get(element.dataset.value).getContent();
-                db.collection("posts").doc(element.dataset.parent).set({
-                    content: data,
-                    updatedAt: Date.now()
-                })
-                    .then(function () {
-                        messages.className += ' alert-success d-block';
-                        document.getElementById('msg-content').innerHTML = '<strong>Changes have been saved successfully</strong>';
-                    })
-                    .catch(function (error) {
-                        messages.className += ' alert-danger d-block'
-                        document.getElementById('msg-content').innerHTML = '<strong>Changes Failed!</strong> ' + error.message;
-                    });
-            })
-        }
-
-
-    </script>
+    <div id="spinner">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <script src="js/admin.js"></script>
 </body>
 
 </html>
