@@ -82,7 +82,7 @@ db.collection("posts").get().then(function (querySnapshot) {
                 <h3 style="text-transform: capitalize">Edit "${item.id.replace(/-/gi, ' ')}"</h3>
                 <form id=${item.id}>
                     <textarea id=${item.id + '-value'}>${item.data().content}</textarea>
-                    <button class="btn btn-primary mt-3" data-parent=${item.id} data-value=${item.id + '-value'} onclick="saveContent(this)">Save</button>
+                    <button class="btn btn-primary px-5 mt-3" data-parent=${item.id} data-value=${item.id + '-value'} onclick="saveContent(this)">Update</button>
                 </form>
             </div>`
     });
