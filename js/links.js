@@ -12,16 +12,19 @@
         lineHeight: 20, // lineheight between texts
       }
   }
+ Documentation for some properties -  https://code.tutsplus.com/tutorials/getting-started-with-matterjs-body-module--cms-28835
 ##########################################*/
-
-
+var bouncing = 0.2; //restitution - between 0 and 1; higher is more bouncing 
+var movingSpeed = 0.05; //  frictionAir objects falling down speed between 0 and 1; less is faster
+var force = 0.2; //  friction
+var weightOfTheObject = 0.04;//density
 
 var blink1 = Matter.Bodies.rectangle(window.innerWidth/1.5, 75, 75, 75, {
     label: "squarelink1",
-    density: 0.04,
-    friction: 1,
-    frictionAir: 0.020,
-    restitution: 0.1,
+    density: weightOfTheObject,
+    friction: force,
+    frictionAir: movingSpeed,
+    restitution: bouncing,
     isStatic:false,
     render: {
       fillStyle: '#8181ff',
@@ -32,10 +35,10 @@ var blink1 = Matter.Bodies.rectangle(window.innerWidth/1.5, 75, 75, 75, {
 
 var blink2 = Matter.Bodies.rectangle(window.innerWidth/2, 75, 75, 75, {
   label: "squarelink2",
-  density: 0.04,
-  friction: 1,
-  frictionAir: 0.020,
-  restitution: 0.1,
+  density: weightOfTheObject,
+  friction: force,
+  frictionAir: movingSpeed,
+  restitution: bouncing,
   url:'bio.html',
   isStatic:false,
   render: {
@@ -50,10 +53,10 @@ var blink2 = Matter.Bodies.rectangle(window.innerWidth/2, 75, 75, 75, {
 
 var blink3 = Matter.Bodies.rectangle(window.innerWidth/3, 95, 95, 95, {
   label: "iam-2018",
-  density: 0.01,
-  friction: 1,
-  frictionAir: 0.020,
-  restitution: 0.1,
+  density: weightOfTheObject,
+  friction: force,
+  frictionAir: movingSpeed,
+  restitution: bouncing,
   url:'bio.html',
   isStatic:false,
   render: {
@@ -75,10 +78,10 @@ var blink3 = Matter.Bodies.rectangle(window.innerWidth/3, 95, 95, 95, {
 
 var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
     label: "squarelink4",
-    density: 0.04,
-    friction: 1,
-    frictionAir: 0.020,
-    restitution: 0.1,
+    density: weightOfTheObject,
+    friction: force,
+    frictionAir: movingSpeed,
+    restitution: bouncing,
     url:'bio.html',
     isStatic:false,
     render: {
@@ -93,10 +96,10 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
 
   var blink5 = Matter.Bodies.rectangle(window.innerWidth/75, 75, 75, 75, {
     label: "squarelink5",
-    density: 0.04,
-    friction: 1,
-    frictionAir: 0.020,
-    restitution: 0.1,
+    density: weightOfTheObject,
+    friction: force,
+    frictionAir: movingSpeed,
+    restitution: bouncing,
     url:'bio.html',
     isStatic:false,
     render: {
@@ -111,10 +114,10 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
 
   var blink6 = Matter.Bodies.rectangle(window.innerWidth/ 2, 75, 75, 75, {
     label: "me",
-    density: 0.04,
-    friction: 1,
-    frictionAir: 0.020,
-    restitution: 0.1,
+    density: weightOfTheObject,
+    friction: force,
+    frictionAir: movingSpeed,
+    restitution: bouncing,
     url:'bio.html',
     isStatic:false,
     render: {
@@ -133,10 +136,10 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
  
   var blink7 = Matter.Bodies.rectangle(window.innerWidth/ 2, 75, 75, 75, {
     label: "squarelink7",
-    density: 0.04,
-    friction: 1,
-    frictionAir: 0.020,
-    restitution: 0.1,
+    density: weightOfTheObject,
+    friction: force,
+    frictionAir: movingSpeed,
+    restitution: bouncing,
     url:'bio.html',
     isStatic:false,
     render: {
@@ -148,10 +151,10 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
 
   var blink8 = Matter.Bodies.rectangle(window.innerWidth/ 1, 75, 75, 75, {
     label: "squarelink8",
-    density: 0.04,
-    friction: 1,
-    frictionAir: 0.020,
-    restitution: 0.1,
+    density: weightOfTheObject,
+    friction: force,
+    frictionAir: movingSpeed,
+    restitution: bouncing,
     url:'bio.html',
     isStatic:false,
     render: {
@@ -168,10 +171,10 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
 
   var blink9 = Matter.Bodies.circle(window.innerWidth/ 5, 45, 45, {
     label: "lightball1",
-    density: 0.04,
-    friction: 1,
-    frictionAir: 0.020,
-    restitution: 0.1,
+    density: weightOfTheObject,
+    friction: force,
+    frictionAir: movingSpeed,
+    restitution: bouncing,
     url:'bio.html',
     isStatic:false,
     render: {
@@ -187,10 +190,10 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
 
   var blink10 = Matter.Bodies.circle(window.innerWidth/ 4, 35, 35, {
     label: "lightball2",
-    density: 0.04,
-    friction: 1,
-    frictionAir: 0.020,
-    restitution: 0.1,
+    density: weightOfTheObject,
+    friction: force,
+    frictionAir: movingSpeed,
+    restitution: bouncing,
     url:'bio.html',
     isStatic:false,
     render: {
@@ -203,10 +206,10 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
 
   var blink11 = Matter.Bodies.circle(window.innerWidth/ 1, 35, 35, {
     label: "lightball3",
-    density: 0.04,
-    friction: 1,
-    frictionAir: 0.025,
-    restitution: 1,
+    density: weightOfTheObject,
+    friction: force,
+    frictionAir: movingSpeed,
+    restitution: bouncing,
     url:'bio.html',
     isStatic:false,
     render: {
@@ -221,10 +224,10 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
 
   var blink12 = Matter.Bodies.circle(window.innerWidth/ 3, 35, 35, {
     label: "lightball4",
-    density: 0.04,
-    friction: 1,
-    frictionAir: 0.025,
-    restitution: 1,
+    density: weightOfTheObject,
+    friction: force,
+    frictionAir: movingSpeed,
+    restitution: bouncing,
     url:'bio.html',
     isStatic:false,
     render: {
@@ -239,10 +242,10 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
 
   var blink13 = Matter.Bodies.circle(window.innerWidth/ 1, 50, 50, {
     label: "testimonials",
-    density: 0.04,
-    friction: 1,
-    frictionAir: 0.025,
-    restitution: 1,
+    density: weightOfTheObject,
+    friction: force,
+    frictionAir: movingSpeed,
+    restitution: bouncing,
     url:'bio.html',
     isStatic:false,
     render: {
@@ -264,10 +267,10 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
 
    var blink14 = Matter.Bodies.circle(window.innerWidth/ 2, 40, 40, {
     label: "lightball6",
-    density: 0.04,
-    friction: 1,
-    frictionAir: 0.025,
-    restitution: 1,
+    density: weightOfTheObject,
+    friction: force,
+    frictionAir: movingSpeed,
+    restitution: bouncing,
     url:'bio.html',
     isStatic:false,
     render: {
@@ -283,10 +286,10 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
 
    var blink15 = Matter.Bodies.circle(window.innerWidth/ 2, 40, 40, {
     label: "lightball7",
-    density: 0.04,
-    friction: 1,
-    frictionAir: 0.025,
-    restitution: 1,
+    density: weightOfTheObject,
+    friction: force,
+    frictionAir: movingSpeed,
+    restitution: bouncing,
     url:'bio.html',
     isStatic:false,
     render: {
@@ -300,10 +303,10 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
   });
 var blink16 = Matter.Bodies.circle(window.innerWidth/ 1, 20, 20, {
     label: "lightball8",
-    density: 0.04,
-    friction: 1,
-    frictionAir: 0.025,
-    restitution: 1,
+    density: weightOfTheObject,
+    friction: force,
+    frictionAir: movingSpeed,
+    restitution: bouncing,
     url:'bio.html',
     isStatic:false,
     render: {
@@ -318,10 +321,10 @@ var blink16 = Matter.Bodies.circle(window.innerWidth/ 1, 20, 20, {
 
 var blink16 = Matter.Bodies.circle(window.innerWidth/ 1, 20, 20, {
     label: "lightball9",
-    density: 0.04,
+    density: weightOfTheObject,
     friction: 1,
-    frictionAir: 0.025,
-    restitution: 1,
+    frictionAir: movingSpeed,
+    restitution: bouncing,
     url:'bio.html',
     isStatic:false,
     render: {
@@ -337,10 +340,10 @@ var blink16 = Matter.Bodies.circle(window.innerWidth/ 1, 20, 20, {
 
 var blink17 = Matter.Bodies.circle(window.innerWidth/ 5, 20, 20, {
     label: "lightball10",
-    density: 0.04,
-    friction: 1,
-    frictionAir: 0.025,
-    restitution: .5,
+    density: weightOfTheObject,
+    friction: force,
+    frictionAir: movingSpeed,
+    restitution: bouncing,
     url:'bio.html',
     isStatic:false,
     render: {
@@ -355,10 +358,10 @@ var blink17 = Matter.Bodies.circle(window.innerWidth/ 5, 20, 20, {
 
 var blink18 = Matter.Bodies.rectangle(window.innerWidth/ 5, 40, 40, 40, {
     label: "squarelink18",
-    density: 0.04,
-    friction: 1,
-    frictionAir: 0.025,
-    restitution: .5,
+    density: weightOfTheObject,
+    friction: force,
+    frictionAir: movingSpeed,
+    restitution: bouncing,
     url:'bio.html',
     isStatic:false,
     render: {
@@ -373,10 +376,10 @@ var blink18 = Matter.Bodies.rectangle(window.innerWidth/ 5, 40, 40, 40, {
 
 var blink19 = Matter.Bodies.circle(window.innerWidth/ 5, 55, 55, {
     label: "everyone-in",
-    density: 0.04,
-    friction: 1,
-    frictionAir: 0.025,
-    restitution: .5,
+    density: weightOfTheObject,
+    friction: force,
+    frictionAir: movingSpeed,
+    restitution: bouncing,
     url: null,
     isStatic:false,
     render: {
@@ -397,10 +400,10 @@ var blink19 = Matter.Bodies.circle(window.innerWidth/ 5, 55, 55, {
 
   var blink20 = Matter.Bodies.circle(window.innerWidth/ 2, 55, 55, {
     label: "safe-clean-water",
-    density: 0.04,
-    friction: 1,
-    frictionAir: 0.025,
-    restitution: .5,
+    density: weightOfTheObject,
+    friction: force,
+    frictionAir: movingSpeed,
+    restitution: bouncing,
     url: null,
     isStatic:false,
     render: {
