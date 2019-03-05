@@ -14,12 +14,13 @@
   }
  Documentation for some properties -  https://code.tutsplus.com/tutorials/getting-started-with-matterjs-body-module--cms-28835
 ##########################################*/
-var bouncing = 0.2; //restitution - between 0 and 1; higher is more bouncing 
-var movingSpeed = 0.05; //  frictionAir objects falling down speed between 0 and 1; less is faster
+var bouncing = 0.3; //restitution - between 0 and 1; higher is more bouncing 
+var movingSpeed = 0.04; //  frictionAir objects falling down speed between 0 and 1; less is faster
 var force = 0.2; //  friction
 var weightOfTheObject = 0.04;//density
+var weightHeavy = 0.15;//density
 
-var blink1 = Matter.Bodies.rectangle(window.innerWidth/1.5, 75, 75, 75, {
+var blink1 = Matter.Bodies.rectangle(window.innerWidth/1.5, 5, 75, 75, {
     label: "squarelink1",
     density: weightOfTheObject,
     friction: force,
@@ -112,7 +113,7 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
     }, 
   });
 
-  var blink6 = Matter.Bodies.rectangle(window.innerWidth/ 2, 75, 75, 75, {
+  var blink6 = Matter.Bodies.rectangle(window.innerWidth/ 2, 25, 75, 75, {
     label: "me",
     density: weightOfTheObject,
     friction: force,
@@ -321,7 +322,7 @@ var blink16 = Matter.Bodies.circle(window.innerWidth/ 1, 20, 20, {
 
 var blink16 = Matter.Bodies.circle(window.innerWidth/ 1, 20, 20, {
     label: "lightball9",
-    density: weightOfTheObject,
+    density: weightHeavy,
     friction: 1,
     frictionAir: movingSpeed,
     restitution: bouncing,
@@ -340,7 +341,7 @@ var blink16 = Matter.Bodies.circle(window.innerWidth/ 1, 20, 20, {
 
 var blink17 = Matter.Bodies.circle(window.innerWidth/ 5, 20, 20, {
     label: "lightball10",
-    density: weightOfTheObject,
+    density: weightHeavy,
     friction: force,
     frictionAir: movingSpeed,
     restitution: bouncing,
@@ -358,7 +359,7 @@ var blink17 = Matter.Bodies.circle(window.innerWidth/ 5, 20, 20, {
 
 var blink18 = Matter.Bodies.rectangle(window.innerWidth/ 5, 40, 40, 40, {
     label: "squarelink18",
-    density: weightOfTheObject,
+    density: weightHeavy,
     friction: force,
     frictionAir: movingSpeed,
     restitution: bouncing,

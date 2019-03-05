@@ -79,9 +79,9 @@ var lgball4 = Matter.Bodies.circle(window.innerWidth/2, 35, 35, {
 
 //squares
 
-var lgbox1 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
+var lgbox1 = Matter.Bodies.rectangle(window.innerWidth/3, 35, 35, 35, {
   label: "block1",
-  density: weightOfTheObject,
+  density: weightHeavy,
   friction: force,
   frictionAir: movingSpeed,
   restitution: bouncing,
@@ -94,9 +94,9 @@ var lgbox1 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
   }, 
 });
 
-var lgbox2 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
+var lgbox2 = Matter.Bodies.rectangle(window.innerWidth/1.8, 65, 35, 35, {
   label: "block2",
-  density: weightOfTheObject,
+  density: weightHeavy,
   friction: force,
   frictionAir: movingSpeed,
   restitution: bouncing,
@@ -109,9 +109,9 @@ var lgbox2 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
   }, 
 });
 
-var lgbox3 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
+var lgbox3 = Matter.Bodies.rectangle(window.innerWidth/4, 20, 35, 35, {
   label: "block3",
-  density: weightOfTheObject,
+  density: weightHeavy,
   friction: force,
   frictionAir: movingSpeed,
   restitution: bouncing,
@@ -124,9 +124,9 @@ var lgbox3 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
   }, 
 });
 
-var lgbox4 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
+var lgbox4 = Matter.Bodies.rectangle(window.innerWidth/5, 35, 35, 35, {
   label: "block4",
-  density: weightOfTheObject,
+  density: weightHeavy,
   friction: force,
   frictionAir: movingSpeed,
   restitution: bouncing,
@@ -139,9 +139,9 @@ var lgbox4 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
   }, 
 });
 
-var mdbox1 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
+var mdbox1 = Matter.Bodies.rectangle(window.innerWidth/6, 35, 35, 35, {
   label: "block5",
-  density: weightOfTheObject,
+  density: weightHeavy,
   friction: force,
   frictionAir: movingSpeed,
   restitution: bouncing,
@@ -154,9 +154,9 @@ var mdbox1 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
   }, 
 });
 
-var mdbox2 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
+var mdbox2 = Matter.Bodies.rectangle(window.innerWidth/1, 35, 35, 35, {
   label: "block6",
-  density: weightOfTheObject,
+  density: weightHeavy,
   friction: force,
   frictionAir: movingSpeed,
   restitution: bouncing,
@@ -171,7 +171,7 @@ var mdbox2 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
 
 var mdbox3 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
   label: "block7",
-  density: weightOfTheObject,
+  density: weightHeavy,
   friction: force,
   frictionAir: movingSpeed,
   restitution: bouncing,
@@ -186,7 +186,7 @@ var mdbox3 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
 
 var mdbox4 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
   label: "block8",
-  density: weightOfTheObject,
+  density: weightHeavy,
   friction: force,
   frictionAir: movingSpeed,
   restitution: bouncing,
@@ -201,7 +201,7 @@ var mdbox4 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
 
 var smbox1 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
   label: "block9",
-  density: weightOfTheObject,
+  density: weightHeavy,
   friction: force,
   frictionAir: movingSpeed,
   restitution: bouncing,
@@ -216,7 +216,7 @@ var smbox1 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
 
 var smbox2 = Matter.Bodies.rectangle(window.innerWidth/2, 35, 35, 35, {
   label: "block10",
-  density: weightOfTheObject,
+  density: weightHeavy,
   friction: force,
   frictionAir: movingSpeed,
   restitution: bouncing,
