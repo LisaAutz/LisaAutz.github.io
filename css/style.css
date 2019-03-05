@@ -42,12 +42,14 @@ p {
 #float{
     position: absolute;
     color:white;
-    top:40%;
-    left:50%;
-    transform: translate(-50%, -50%);
+    top:20px;
+    left:20px;
+    /* transform: translate(-50%, -50%); */
     z-index: 1;
     cursor: default;
-    
+}
+#float * {
+    text-align: left;
 }
 
 #flip{

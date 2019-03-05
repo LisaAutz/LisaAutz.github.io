@@ -8,7 +8,7 @@ function closePopUp(parent) {
     var parentElId =parent.dataset.target;
     var parent = document.getElementById(parentElId);
 
-    parent.className = 'pop-up animated fadeOutDown';
+    parent.className = 'pop-up animated slideOutDown';
     setTimeout(function() {
         parent.className = 'pop-up';
         parent.style.display = 'none';
