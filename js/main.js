@@ -135,32 +135,32 @@ Matter.Events.on(mConstraint, 'mousedown', function (event) {
       // For popup content
       if(a.label === 'me') {
         document.getElementById('me').style.display = 'block';
-        document.getElementById('me').className += ' animated slideInUp';
+        document.getElementById('me').className += ' animated bounce';
         mConstraint.body = null;
       }
       if(a.label === 'everyone-in') {
         document.getElementById('everyone-in').style.display = 'block';
-        document.getElementById('everyone-in').className += ' animated slideInUp';
+        document.getElementById('everyone-in').className += ' animated bounce';
         mConstraint.body = null;
       }
       if(a.label === 'safe-clean-water') {
         document.getElementById('safe-clean-water').style.display = 'block';
-        document.getElementById('safe-clean-water').className += ' animated slideInUp';
+        document.getElementById('safe-clean-water').className += ' animated bounce';
         mConstraint.body = null;
       }
       if(a.label === 'iam-2018') {
         document.getElementById('iam-2018').style.display = 'block';
-        document.getElementById('iam-2018').className += ' animated slideInUp';
+        document.getElementById('iam-2018').className += ' animated bounce';
         mConstraint.body = null;
       }
       if(a.label === 'music') {
         document.getElementById('music').style.display = 'block';
-        document.getElementById('music').className += ' animated slideInUp';
+        document.getElementById('music').className += ' animated bounce';
         mConstraint.body = null;
       }
       if(a.label === 'testimonials') {
         document.getElementById('testimonials').style.display = 'block';
-        document.getElementById('testimonials').className += ' animated slideInUp';
+        document.getElementById('testimonials').className += ' animated bounce';
         mConstraint.body = null;
       }
     }
