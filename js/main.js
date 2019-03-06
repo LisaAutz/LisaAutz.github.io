@@ -135,7 +135,7 @@ Matter.Events.on(mConstraint, 'mousedown', function (event) {
       // For popup content
       if(a.label === 'me') {
         document.getElementById('me').style.display = 'block';
-        document.getElementById('me').className += ' animated bounce';
+        document.getElementById('me').className += ' animated bounceIn';
         mConstraint.body = null;
       }
       if(a.label === 'everyone-in') {
