@@ -113,7 +113,7 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
     }, 
   });
 
-  var blink6 = Matter.Bodies.rectangle(window.innerWidth/ 2, 25, 75, 75, {
+  var blink6 = Matter.Bodies.rectangle(window.innerWidth/ 2, 55, 75, 75, {
     label: "me",
     density: weightOfTheObject,
     friction: force,

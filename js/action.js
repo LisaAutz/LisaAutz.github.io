@@ -8,10 +8,10 @@ function closePopUp(parent) {
     var parentElId =parent.dataset.target;
     var parent = document.getElementById(parentElId);
 
-    parent.className = 'pop-up animated bounceOut slow';
+    parent.classList.add('hide');
     setTimeout(function() {
         parent.className = 'pop-up';
-        parent.style.display = 'none';
+        parent.style.display = 'none !important';
     }, 1000)
 }
 
