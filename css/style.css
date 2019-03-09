@@ -20,6 +20,8 @@
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Open Sans Condensed', sans-serif;
+    text-align:center;
+    position: center;
 }
 
 h1{
@@ -81,6 +83,7 @@ p {
     z-index: 999;
     display: none;
     align-items: center;
+    text-align: center;
     justify-content: center;
     flex-direction: column;
     padding: 40px 10px 40px 20px;
@@ -172,10 +175,10 @@ p {
     padding-bottom: 100px;
 }
 .pop-up-content * {
-    text-align: left;
+    text-align: center;
 } 
 .text-center {
-    text-align: center;
+    text-align: left;
 }
 .pop-up-content::-webkit-scrollbar {
     width: 12px;
@@ -203,7 +206,7 @@ p {
     font-size: 18px;
     letter-spacing: 1px;
     margin-bottom: 25px;
-    text-align: left;
+    text-align: center;
 }
 .pop-up-content p a {
     color: #939ad2;
