@@ -134,36 +134,29 @@ Matter.Events.on(mConstraint, 'mousedown', function (event) {
       console.log(a)
       // For popup content
       if(a.label === 'me') {
-        document.getElementById('me').style.display = 'block';
-        document.getElementById('me').className += ' animated bounceInUp';
+        document.getElementById('me').classList.add('show');
         mConstraint.body = null;
       }
-      if(a.label === 'recent1') {
-        document.getElementById('recent1').style.display = 'block';
-        document.getElementById('recent1').className += ' animated bounceInUp';
+      if(a.label === 'everyone-in') {
+        document.getElementById('everyone-in').classList.add('show');
         mConstraint.body = null;
       }
-      if(a.label === 'recent2') {
-        document.getElementById('recent2').style.display = 'block';
-        document.getElementById('recent2').className += ' animated bounceInUp';
+      if(a.label === 'safe-clean-water') {
+        document.getElementById('safe-clean-water').classList.add('show');
         mConstraint.body = null;
       }
-      if(a.label === 'recent3') {
-        document.getElementById('recent3').style.display = 'block';
-        document.getElementById('recent3').className += ' animated bounceInUp';
+      if(a.label === 'iam-2018') {
+        document.getElementById('iam-2018').classList.add('show');
         mConstraint.body = null;
       }
-      if(a.label === 'listen') {
-        document.getElementById('listen').style.display = 'block';
-        document.getElementById('listen').className += ' animated bounceInUp';
+      if(a.label === 'music') {
+        document.getElementById('music').classList.add('show');
         mConstraint.body = null;
       }
       if(a.label === 'testimonials') {
-        document.getElementById('testimonials').style.display = 'block';
-        document.getElementById('testimonials').className += ' animated bounceInUp';
+        document.getElementById('testimonials').classList.add('show');
         mConstraint.body = null;
       }
     }
   }
 });
-

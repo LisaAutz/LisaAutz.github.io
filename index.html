@@ -12,17 +12,15 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:700" rel="stylesheet">	
 	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-
+	<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
 </head>
 
-<body>
+<body id="main-page">
 	<div id="float">
 
 		<p>Adam Weissler</p>
-		<p></p>
-		<img src="images/Adam1.jpg" />
-		<p></p>
-		<img src="images/Adam2.jpg" />
+		
 		<p>Ideation. Strategy. Storytelling. Photography + Film.</p>
 		<p>adamjweissler[at]gmail.com</p>
 	</div>
@@ -135,6 +133,7 @@
 		</div>
 		<!-- ******** RECENT3 POP UP ENDS  ************ -->
 
+	<div id="myposts"></div>
 		
 	<div onclick="flipMe();invertGrav()">
 		<div id="flip"></div>
