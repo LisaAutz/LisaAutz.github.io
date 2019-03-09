@@ -131,7 +131,7 @@ p {
       opacity: 1 !important;
     }
   }
-.show {
+.show-me {
       display: block;
       animation: fadeIn 2s, bounce 4s;
       -webkit-animation: fadeIn 2s, bounce 4s;
@@ -158,11 +158,9 @@ p {
         display: none;
     }
   }
-.show.hide {
+.show-me.hide-me {
     animation: bounceOut 3s;
     -webkit-animation: bounceOut 3s;
-    /*display: none;
-    */:;
 }
 
 .pop-up-content {
