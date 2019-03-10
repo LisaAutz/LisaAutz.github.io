@@ -8,7 +8,7 @@ function closePopUp(parent) {
     var parentElId =parent.dataset.target;
     var parent = document.getElementById(parentElId);
 
-    parent.classList.add('hide');
+    parent.classList.add('hide-me');
     setTimeout(function() {
         parent.className = 'pop-up';
         parent.style.display = 'none !important';

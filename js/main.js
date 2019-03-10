@@ -134,27 +134,27 @@ Matter.Events.on(mConstraint, 'mousedown', function (event) {
       console.log(a)
       // For popup content
       if(a.label === 'me') {
-        document.getElementById('me').classList.add('show');
+        document.getElementById('me').classList.add('show-me');
         mConstraint.body = null;
       }
       if(a.label === 'everyone-in') {
-        document.getElementById('everyone-in').classList.add('show');
+        document.getElementById('everyone-in').classList.add('show-me');
         mConstraint.body = null;
       }
       if(a.label === 'safe-clean-water') {
-        document.getElementById('safe-clean-water').classList.add('show');
+        document.getElementById('safe-clean-water').classList.add('show-me');
         mConstraint.body = null;
       }
       if(a.label === 'iam-2018') {
-        document.getElementById('iam-2018').classList.add('show');
+        document.getElementById('iam-2018').classList.add('show-me');
         mConstraint.body = null;
       }
       if(a.label === 'music') {
-        document.getElementById('music').classList.add('show');
+        document.getElementById('music').classList.add('show-me');
         mConstraint.body = null;
       }
       if(a.label === 'testimonials') {
-        document.getElementById('testimonials').classList.add('show');
+        document.getElementById('testimonials').classList.add('show-me');
         mConstraint.body = null;
       }
     }
