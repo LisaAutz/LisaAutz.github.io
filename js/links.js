@@ -152,10 +152,6 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
 
   var blink8 = Matter.Bodies.rectangle(window.innerWidth/ 1, 75, 75, 75, {
     label: "squarelink8",
-    density: 0.04,
-    friction: 1,
-    frictionAir: 0.00001,
-    restitution: 0.6,
     density: weightOfTheObject,
     friction: force,
     frictionAir: movingSpeed,
@@ -176,10 +172,6 @@ var blink4 = Matter.Bodies.rectangle(window.innerWidth - 75, 75, 75, 75, {
 
   var blink9 = Matter.Bodies.circle(window.innerWidth/ 5, 45, 45, {
     label: "lightball1",
-    density: 0.04,
-    friction: 1,
-    frictionAir: 0.00001,
-    restitution: 0.6,
     density: weightOfTheObject,
     friction: force,
     frictionAir: movingSpeed,
