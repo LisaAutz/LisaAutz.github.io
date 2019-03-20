@@ -8,10 +8,10 @@ function closePopUp(parent) {
     var parentElId =parent.dataset.target;
     var parent = document.getElementById(parentElId);
 
-    parent.classList.add('hide-me');
+    parent.className = 'pop-up animated fadeOutDown';
     setTimeout(function() {
         parent.className = 'pop-up';
-        parent.style.display = 'none !important';
+        parent.style.display = 'none';
     }, 1000)
 }
 
