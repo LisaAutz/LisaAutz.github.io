@@ -14,8 +14,8 @@
   }
  Documentation for some properties -  https://code.tutsplus.com/tutorials/getting-started-with-matterjs-body-module--cms-28835
 ##########################################*/
-var bouncing = 0.3; //restitution - between 0 and 1; higher is more bouncing 
-var movingSpeed = 0.0001; //  frictionAir objects falling down speed between 0 and 1; less is faster
+var bouncing = 0.1; //restitution - between 0 and 1; higher is more bouncing 
+var movingSpeed = 0.001; //  frictionAir objects falling down speed between 0 and 1; less is faster
 var force = 0.2; //  friction
 var weightOfTheObject = 0.04;//density
 var weightHeavy = 0.15;//density
