@@ -7,12 +7,12 @@
 function closePopUp(parent) {
     var parentElId =parent.dataset.target;
     var parent = document.getElementById(parentElId);
-
-    parent.className = 'pop-up animated fadeOutDown';
-    setTimeout(function() {
-        parent.className = 'pop-up';
-        parent.style.display = 'none';
-    }, 1000)
+    parent.style.transform = 'scale(0)'
+    // parent.className = 'pop-up animated fadeOutDown';
+    // setTimeout(function() {
+    //     parent.className = 'pop-up';
+    //     parent.style.display = 'none';
+    // }, 1000)
 }
 
 // For Loading Posts data from Firestore

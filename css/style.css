@@ -79,13 +79,16 @@ p {
     max-width: 700px;
     margin: auto;
     z-index: 999;
-    display: none;
+    /* display: none; */
     align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 40px 10px 40px 20px;
     background-color: #40445e;
     color: #fff;
+    transform: scale(0);
+    transition: 3s;
+
     /* opacity: 0; */
 }
 
