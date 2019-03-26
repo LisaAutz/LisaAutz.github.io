@@ -105,7 +105,7 @@ p {
     text-align: center;
 }
 .pop-up-content::-webkit-scrollbar {
-    width: 12px;
+    width: 3px;
 }
 
 .pop-up-content::-webkit-scrollbar-track {
@@ -254,6 +254,10 @@ p {
     .pop-up {
         width: 94%;
         padding: 5px;
+        padding-top: 30px;
+    }
+    .pop-up-content h2 {
+        line-height: 3;
     }
     .pop-up iframe {
         width: 90%;
