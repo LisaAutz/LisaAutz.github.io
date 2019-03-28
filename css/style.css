@@ -108,7 +108,7 @@ p {
     width: 3px;
 }
 
-.pop-up-content::-webkit-scrollbar-track {
+/* .pop-up-content::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgb(255, 255, 255); 
     border-radius: 10px;
     background-color: #f2d911;
@@ -119,7 +119,7 @@ p {
     height: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
     background-color: #40445e;
-}
+} */
 .pop-up-content h2 {
     line-height: 4.5;
     font-weight: 700;
