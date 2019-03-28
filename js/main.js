@@ -129,11 +129,11 @@ Matter.Events.on(mConstraint, 'mousedown', function (event) {
   
   if (mConstraint.body == null) {
     console.log('Body is null',mConstraint);
-    a.force = { x: 0, y: -17.5 };
+    // a.force = { x: 0, y: -17.5 };
 
   } else {
     if (mConstraint.body.label != null) {
-      a = mConstraint.body;
+     let a = mConstraint.body;
 
       let {x,y} = a.position;
      
