@@ -23,7 +23,7 @@ var render = Matter.Render.create({
 });
 
 // 0.35
-engine.world.gravity.y = .2;
+engine.world.gravity.y = .15;
 engine.world.gravity.x = 0
 
 
