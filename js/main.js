@@ -8,6 +8,7 @@ var cycle = 0
 var Bodies = Matter.Bodies
 var engine = Matter.Engine.create();
 var world = engine.world;
+var Query = Matter.Query;
 
 var render = Matter.Render.create({
   canvas: myCanvas,
@@ -22,7 +23,7 @@ var render = Matter.Render.create({
 });
 
 // 0.35
-engine.world.gravity.y = .3;
+engine.world.gravity.y = .15;
 engine.world.gravity.x = 0
 
 
@@ -124,38 +125,66 @@ Matter.World.add(world, mConstraint);
 
 
 Matter.Events.on(mConstraint, 'mousedown', function (event) {
+  var foundObject = Query.point(linkBodies, event.mouse.position);
+  
   if (mConstraint.body == null) {
     console.log('Body is null',mConstraint);
+    // a.force = { x: 0, y: -17.5 };
 
   } else {
     if (mConstraint.body.label != null) {
-      a = mConstraint.body;
-      a.force = { x: 0, y: -17.5 };
-      console.log(a)
+     let a = mConstraint.body;
+
+      let {x,y} = a.position;
+     
+      // Current pop-up
+      var currentEl = document.getElementById(a.label);
+      // Find popups margin-left
+      var currentElMarginLeft =  window.getComputedStyle(document.querySelector('.pop-up')).marginLeft
+      // Pop-up left(x) origin
+      var leftOrigin = x - parseInt(currentElMarginLeft);
+       // Pop-up top(y) origin
+      var topOrigin = y - 50;
+      
+      
       // For popup content
       if(a.label === 'me') {
-        document.getElementById('me').classList.add('show-me');
+       currentEl.style.display = 'block';
+       currentEl.style.cssText = 'transform-origin:'+(leftOrigin)+'px '+(topOrigin)+'px; transform:scale(1);transition: transform 1s ease-in-out;';
+        //currentEl.className += ' animated fadeInDown fast';
         mConstraint.body = null;
-      }
-      if(a.label === 'everyone-in') {
-        document.getElementById('everyone-in').classList.add('show-me');
+      } else if(a.label === 'everyone-in') {
+        currentEl.style.display = 'block';
+        currentEl.style.cssText = 'transform-origin:'+(leftOrigin)+'px '+(topOrigin)+'px; transform:scale(1);transition: transform 1s ease-in-out;';
+        // currentEl.className += ' animated fadeInDown fast';
         mConstraint.body = null;
-      }
-      if(a.label === 'safe-clean-water') {
-        document.getElementById('safe-clean-water').classList.add('show-me');
+      } else if(a.label === 'safe-clean-water') {
+        currentEl.style.display = 'block';
+        currentEl.style.cssText = 'transform-origin:'+(leftOrigin)+'px '+(topOrigin)+'px; transform:scale(1);transition: transform 1s ease-in-out;';
+
+        // currentEl.className += ' animated fadeInDown fast';
         mConstraint.body = null;
-      }
-      if(a.label === 'iam-2018') {
-        document.getElementById('iam-2018').classList.add('show-me');
+      } else if(a.label === 'iam-2018') {
+       currentEl.style.display = 'block';
+       currentEl.style.cssText = 'transform-origin:'+(leftOrigin)+'px '+(topOrigin)+'px; transform:scale(1);transition: transform 1s ease-in-out;';
+
+        //currentEl.className += ' animated fadeInDown fast';
         mConstraint.body = null;
-      }
-      if(a.label === 'music') {
-        document.getElementById('music').classList.add('show-me');
+      } else if(a.label === 'music') {
+        currentEl.style.display = 'block';
+        currentEl.style.cssText = 'transform-origin:'+(leftOrigin)+'px '+(topOrigin)+'px; transform:scale(1);transition: transform 1s ease-in-out;';
+
+        // currentEl.className += ' animated fadeInDown fast';
         mConstraint.body = null;
-      }
-      if(a.label === 'testimonials') {
-        document.getElementById('testimonials').classList.add('show-me');
+      } else if(a.label === 'testimonials') {
+        currentEl.style.display = 'block';
+        currentEl.style.cssText = 'transform-origin:'+(leftOrigin)+'px '+(topOrigin)+'px; transform:scale(1);transition: transform 1s ease-in-out;';
+
+        // currentEl.className += ' animated fadeInDown fast';
         mConstraint.body = null;
+      }  else {
+        a.force = { x: 0, y: -17.5 };
+
       }
     }
   }
